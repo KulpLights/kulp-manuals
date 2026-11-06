@@ -1,8 +1,8 @@
 # Controls & display
 
 Every board has a small **OLED display** and five buttons: **Up**, **Down**, **Enter**,
-**Back** and **Test**. The K8-PB has four: **Down** and **Test** share one button, marked
-*Down Test*. On the status page it works as **Test**; in menus it works as **Down**. The
+**Back** and **Test**. The K8-PB and K40D-PB have four: **Down** and **Test** share one button,
+marked *Down Test* (*Down/Test* on the K40D-PB). On the status page it works as **Test**; in menus it works as **Down**. The
 K4-PB and PocketScroller v2 have two buttons, **Down** (which is also Test, as on the K8-PB) and **Enter**. From them you can check status, read the IP address, change modes
 and run test patterns without a computer.
 

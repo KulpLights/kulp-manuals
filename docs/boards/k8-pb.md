@@ -33,7 +33,7 @@ one difference.
 | Expansion port | 24-pin (2×12) header, 16 strings (21–36), for a Falcon F16v4-style expansion board |
 | Total strings | 36 |
 | Power input | 1 terminal, **5–18 V DC**, powers the controller and all 8 ports |
-| DMX / serial | 1, RS-485 transmit, 3-pin 2.54 mm header (`ttyS2`) |
+| DMX / serial | 1, RS-485 transmit, 3-pin 2.54 mm header (`ttyS2`). **Needs FPP 10.3 or later.** |
 | Audio | none built in. Use a USB sound card. |
 | Ethernet | **none.** Use a USB Ethernet or Wi-Fi adapter. |
 | USB-A | 1 |
@@ -141,6 +141,11 @@ DMX is on the 3-pin, 2.54 mm header at the top right, above the USB port, marked
 
 Make up a cable from a 3-pin socket to an XLR or RJ45 DMX connector, wired as above. The output
 is transmit-only. FPP calls the port `ttyS2`. See [DMX / serial](../hardware/dmx.md).
+
+!!! warning "DMX needs FPP 10.3 or later"
+    On the PocketBeagle 2 the DMX header's pin has no UART transmit, so FPP sends DMX from one of
+    the PocketBeagle's PRUs instead. That arrived in **FPP 10.3**. With an earlier FPP the DMX
+    output doesn't work; everything else does.
 
 ### Other connectors
 

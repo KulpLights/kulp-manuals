@@ -20,6 +20,7 @@ which terminal feeds which ports.
 | K8-Pro, K8-Max | 2 | 4 ports | the **right-hand** terminal (ports 5–8) |
 | K8-PB | 1 (5–18 V) | all 8 ports | the only terminal |
 | K4-PB | 1 (5 or 12 V, 18 V max) | all 4 ports | the only terminal |
+| K40D-PB | 1 (5 V only) | — (differential only) | the only terminal |
 | K16, K16-Pro, K16-Max | 4 | 4 ports | **V1**, upper left (ports 1–4) |
 | K32, K32-Pro, K32-Max | 8 | 4 ports | **V1**, top left (ports 1–4) |
 | PocketScroller v2, v3 and -16 | 1 (5 V only) | — | the only terminal |
@@ -41,6 +42,8 @@ which terminal feeds which ports.
 - **K8-PB and K4-PB:** one terminal, **5 V to 18 V DC** (5 or 12 V supplies), for the controller
   and all the ports. **No 24 V.** See the [K8-PB](../boards/k8-pb.md) and [K4-PB](../boards/k4-pb.md)
   pages.
+- **K40D-PB:** **5 V DC only**, for the controller alone, from a supply rated 4–5 A. Its strings
+  are powered at the receivers.
 - **PocketScroller v2, v3 and -16:** **5 V DC only.** See their board pages.
 - A 5 V supply on the logic terminal is fine. The controller's internal 5 V regulator
   passes it straight through (about 4.96 V out from 5.0 V in), so 5 V-only setups need no

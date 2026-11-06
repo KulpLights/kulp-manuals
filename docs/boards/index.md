@@ -33,24 +33,24 @@ monitored. †Bank switching on the K16-Pro and K32-Pro starts at board revision
 - **Max:** everything in Pro, plus an **eFuse on every port**. FPP can switch each port and read
   its current, and a short is cut in microseconds and reported in FPP instead of blowing a fuse.
 
-## Compact controllers: K8-PB and K4-PB
+## Compact controllers: K8-PB, K4-PB and K40D-PB
 
-| | K8-PB | K4-PB |
-|---|---|---|
-| Local pixel ports | 8 | 4 |
-| Port protection | eFuse, per-port current reading and power control | eFuse, per-port current reading and power control |
-| Differential ports (strings) | 3 (12), send-only | — |
-| Expansion port | 16 strings, through a Falcon F16v4-style expansion board | — |
-| **Total strings** | **36** | **4** |
-| Power input | 1 terminal, **5–18 V** | 1 terminal, **5 or 12 V** |
-| DMX / serial | 1, on a 3-pin header | 1, on a 3-pin header |
-| Ethernet | **none**: add a USB adapter | **none**: add a USB adapter |
-| Real-time clock | ✔ | — |
-| USB-A | 1 | 1 |
-| Size (mm) | 74 × 97 | 71 × 67 |
+| | K8-PB | K4-PB | K40D-PB |
+|---|---|---|---|
+| Local pixel ports | 8, eFused | 4, eFused | — |
+| Differential ports (strings) | 3 (12) | — | **10 (40)** |
+| Expansion port | 16 strings | — | — |
+| **Total strings** | **36** | **4** | **40** |
+| Power input | **5–18 V** | **5 or 12 V** | **5 V** only |
+| DMX / serial | 3-pin header | 3-pin header | 3-pin terminal |
+| Ethernet | none (USB adapter) | none (USB adapter) | none (USB adapter) |
+| Real-time clock | ✔ | — | ✔ |
+| Size (mm) | 74 × 97 | 71 × 67 | 83 × 99 |
 
-Both use an older output driver (BBB48String), so they have no Falcon V5 support. The K4-PB fits a
-small TA-200 enclosure. See the [K8-PB](k8-pb.md) and [K4-PB](k4-pb.md) pages.
+All three use an older output driver (BBB48String), so their differential ports are send-only with
+no Falcon V5 support. The K8-PB's expansion port drives 16 strings through a Falcon F16v4-style
+expansion board, and the K4-PB fits a small TA-200 enclosure. See the [K8-PB](k8-pb.md),
+[K4-PB](k4-pb.md) and [K40D-PB](k40d-pb.md) pages.
 
 ## LED panels
 
@@ -67,5 +67,5 @@ small TA-200 enclosure. See the [K8-PB](k8-pb.md) and [K4-PB](k4-pb.md) pages.
 
 ## All boards
 
-All of them need a **PocketBeagle 2** and run **FPP**. The K4-PB and PocketScroller v2 also work with the
-original PocketBeagle 1. See [PocketBeagle 2](../hardware/pocketbeagle2.md).
+All of them need a **PocketBeagle 2** and run **FPP**. The K4-PB, K40D-PB and PocketScroller v2 also
+work with the original PocketBeagle 1. See [PocketBeagle 2](../hardware/pocketbeagle2.md).

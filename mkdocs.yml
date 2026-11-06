@@ -93,6 +93,7 @@ nav:
       - K8-Max: boards/k8-max.md
       - K8-PB: boards/k8-pb.md
       - K4-PB: boards/k4-pb.md
+      - K40D-PB: boards/k40d-pb.md
       - K16: boards/k16.md
       - K16-Pro: boards/k16-pro.md
       - K16-Max: boards/k16-max.md

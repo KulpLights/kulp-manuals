@@ -11,6 +11,7 @@ To tell them apart at a glance:
 | **8** green pixel plugs, mini-blade fuses along the bottom edge | [K8-Pro](../boards/k8-pro.md) |
 | **8** green pixel plugs, no fuses | [K8-Max](../boards/k8-max.md) |
 | **8** green pixel plugs on a small (74 × 97 mm) board, **3** RJ45s, no Ethernet jack, a 24-pin header on the left edge | [K8-PB](../boards/k8-pb.md) |
+| **10** RJ45 jacks (5 along the top, 5 along the bottom) and no pixel plugs | [K40D-PB](../boards/k40d-pb.md) |
 | **4** green pixel plugs in one row on a small (71 × 67 mm) board, no RJ45 jacks | [K4-PB](../boards/k4-pb.md) |
 | **16** pixel plugs with fuses, **4** port RJ45s, one `DMX` jack | [K16](../boards/k16.md) |
 | **16** pixel plugs with fuses, **8** port RJ45s, `DMX1`/`DMX2` | [K16-Pro](../boards/k16-pro.md) |
@@ -39,6 +40,10 @@ To tell them apart at a glance:
 -   ![K4-PB](../assets/boards/K4-PB-top.webp){ loading=lazy }
 
     **K4-PB** (rendering)
+
+-   ![K40D-PB](../assets/boards/K40D-PB-photo.webp){ loading=lazy }
+
+    **K40D-PB**
 
 -   ![K16](../assets/boards/K16-photo.webp){ loading=lazy }
 

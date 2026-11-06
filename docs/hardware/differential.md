@@ -83,12 +83,12 @@ shows them on the [Port Status](../software/current-monitoring.md) page next to 
 ports. **Only Falcon V5 receivers report back.** Every other receiver works as a normal,
 send-only receiver on these ports.
 
-On the **K16**, **K32** and **K8-PB** the differential ports are **send-only**. Every receiver
+On the **K16**, **K32**, **K8-PB** and **K40D-PB** the differential ports are **send-only**. Every receiver
 works, but none can report back.
 
-!!! note "K8-PB: no V5"
-    FPP drives the K8-PB with its **BBB48String** output, which has no V5 protocol. Set smart
-    receivers on a K8-PB to v1, v2 or V4. A V5 setting falls back to V4.
+!!! note "K8-PB and K40D-PB: no V5"
+    FPP drives the K8-PB and K40D-PB with its **BBB48String** output, which has no V5 protocol. Set
+    smart receivers on these boards to v1, v2 or V4. A V5 setting falls back to V4.
 
 ## Cabling tips
 

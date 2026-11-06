@@ -13,6 +13,7 @@ Where the readings come from depends on the board:
 | **Max** (K8-Max, K16-Max, K32-Max) | current, on/off and eFuse status for every port | from Falcon V5 receivers |
 | **K8-PB** | current, on/off and eFuse status for every port | none (send-only) |
 | **K4-PB** | current, on/off and eFuse status for every port | — (no differential ports) |
+| **K40D-PB** | — (no local ports) | none (send-only) |
 | **Pro** (K8-Pro, K16-Pro, K32-Pro) | none (fused ports) | from Falcon V5 receivers |
 | K16, K32 | none | none (send-only) |
 

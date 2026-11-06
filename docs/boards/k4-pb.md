@@ -92,6 +92,13 @@ Make up a cable from a 3-pin socket to an XLR or RJ45 DMX connector, wired as ab
 is transmit-only and can also drive Renard, LOR or Pixelnet through a suitable adapter. FPP calls
 the port `ttyS4`. See [DMX / serial](../hardware/dmx.md).
 
+!!! note "DMX on a PocketBeagle 2 with an older EEPROM"
+    On a PocketBeagle 2, FPP finds this DMX port through a mapping in the cape EEPROM, added in
+    EEPROM **3.0.1** (February 2025). On a board programmed before then, a DMX output on `ttyS4`
+    goes to the wrong serial port and nothing comes out. Fix it by updating the cape EEPROM under
+    *Help → About → Cape Info* (see [Updating](../software/updating.md)), or set the DMX output's
+    port to **`ttyS5`** instead. On a PocketBeagle 1, `ttyS4` always works.
+
 ### GPIO header
 
 The 2×4 header position at the top right is **not fitted**: solder in a 2×4, 2.54 mm pin header

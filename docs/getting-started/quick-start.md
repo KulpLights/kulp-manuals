@@ -8,12 +8,15 @@ you know which step it was.
 - [ ] The controller, with a **PocketBeagle 2** fitted (see [PocketBeagle 2](../hardware/pocketbeagle2.md))
 - [ ] A **microSD card with FPP**, unless you have a PB2 Industrial with FPP on eMMC
 - [ ] A **5–24 V DC LED power supply** matched to your pixels (**5 V only** for the PocketScrollers)
-- [ ] An **Ethernet cable** to your router or show switch. The K8-PB, K4-PB and PocketScroller v2
+- [ ] An **Ethernet cable** to your router or show switch. The K8-PB, K4-PB, K40D-PB and PocketScroller v2
       have no Ethernet jack, so they also need a **USB Ethernet adapter** (or a USB Wi-Fi adapter).
 - [ ] Pixels with a pigtail wired to a 3-pin plug (or LED panels for the PocketScroller)
 - [ ] A small flat screwdriver
 
 ## 1. Bench test with one string
+
+On the **K40D-PB**, which has no pixel ports, wire the string to a differential receiver on the
+`1-4` jack instead, and power the K40D-PB from a 5 V supply.
 
 1. [ ] Read [Safety](safety.md).
 2. [ ] Insert the SD card into the PocketBeagle 2, unless you are using eMMC.
@@ -27,7 +30,7 @@ you know which step it was.
        the K8 boards, P1 is fed from the left terminal, so for this test wire both K8 terminals,
        or use P5 instead. The K8-PB and K4-PB have a single terminal for everything.
        See [Power](../hardware/power.md#banks).
-6. [ ] Plug in the Ethernet cable (on the K8-PB, K4-PB or PocketScroller v2, through the USB Ethernet adapter).
+6. [ ] Plug in the Ethernet cable (on the K8-PB, K4-PB, K40D-PB or PocketScroller v2, through the USB Ethernet adapter).
 7. [ ] Plug the supply into the mains.
 
 **Check:** the blue power LEDs light, and within a minute or two the OLED shows the FPP logo and then
