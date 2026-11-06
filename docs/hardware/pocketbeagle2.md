@@ -94,11 +94,38 @@ install:
 
 !!! note "If the board won't boot at all"
     If the eMMC's bootloader is damaged, the board can't find the SD card on its own. Hold the
-    PocketBeagle 2's **second button** while you apply power to force it to boot from the SD
-    card, then re-flash as above. This is very rarely needed.
+    PocketBeagle 2's [**boot button**](#the-pocketbeagle-2s-buttons) while you apply power to force it to boot from
+    the SD card, then re-flash as above. This is very rarely needed.
 
 You don't need to re-flash to update FPP. FPP and OS updates work in place on the eMMC; see
 [Updating](../software/updating.md). Re-flashing is only for a clean start or recovery.
+
+## The PocketBeagle 2's buttons
+
+The PocketBeagle 2 has two small buttons of its own, side by side, separate from the buttons on the
+cape. They aren't labelled on the board:
+
+| Button | Where | What it does |
+|---|---|---|
+| **Power** | the one **nearest the board edge** and the PocketBeagle's LEDs | Holding it down **turns the PocketBeagle 2 off**. Don't hold it by accident; to turn off cleanly, use FPP's **Shutdown** instead. |
+| **Boot** | the one beside it, **further from the edge** | Only read at power-on. Hold it while you apply power to change where the board boots from (below). |
+
+What the boot button does depends on the model:
+
+| | Normal power-on | Boot button held at power-on |
+|---|---|---|
+| **PocketBeagle 2 Industrial** | boots from the **eMMC**. The bootloader there then switches to an SD card if a valid one is inserted. | boots straight from the **SD card**, skipping the eMMC. Use this to [recover a damaged eMMC](#re-flashing-the-emmc). |
+| **PocketBeagle 2** (regular) | boots from the **SD card** | also boots from the SD card. The button only changes the fallback the chip tries if the card can't be read, so it has no practical use. |
+
+### Using the boot button as an input
+
+The boot button only affects booting at power-on, so once FPP is running you can use it as a spare
+push button. Starting with **FPP 10.4**, it appears in FPP's *GPIO Inputs* as **`BOOT`**. Set it up
+like any other input to start a playlist, run a command or trigger an effect. See
+[GPIO Inputs](https://manual.falconplayer.com/060-gpio-inputs/) in the FPP manual.
+
+Pressing it while the controller is running is safe: it doesn't reboot or change anything until
+the next power-on.
 
 ## Powering
 
