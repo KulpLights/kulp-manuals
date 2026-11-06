@@ -41,10 +41,23 @@ into a USB-A port to get:
 See the FPP manual's [hardware list](https://manual.falconplayer.com/004-hardware/) for
 supported adapters.
 
-!!! note "No USB tethering on PocketBeagle 2"
-    Older BeagleBone controllers could be set up over a USB cable to a PC. The
-    PocketBeagle 2 **does not support USB tethering**. Use Ethernet, or a Wi-Fi adapter in
-    hotspot mode, for first setup.
+## USB tethering
+
+You can also set the controller up over a USB cable, with no network at all. Connect the
+PocketBeagle 2's **USB-C** port to a computer, wait for FPP to start, then browse to:
+
+- **192.168.7.2** on Windows
+- **192.168.6.2** on macOS or Linux
+
+Over USB-C alone, only the PocketBeagle 2 itself is powered: the cape's Ethernet, USB ports and
+outputs stay off until the cape has its own power. That's fine for configuring FPP. On the K8, K16
+and K32 boards, the K8-PB, the K4-PB, and all the PocketScrollers it's also safe to keep the USB cable
+connected while the cape has its own power.
+
+!!! danger "Not on the K40D-PB, or with a PocketBeagle 1"
+    Never connect the PocketBeagle's USB port to a computer on a **K40D-PB**, or on a **K4-PB or
+    PocketScroller v2 fitted with an original PocketBeagle 1**. It can permanently damage the board.
+    Use a USB network adapter instead. A K4-PB or PocketScroller v2 with a PocketBeagle 2 is fine.
 
 ## USB ports
 

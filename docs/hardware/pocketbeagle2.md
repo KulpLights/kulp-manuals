@@ -132,6 +132,7 @@ the next power-on.
 The PB2 is powered **from the cape**, through its power terminal (see [Power](power.md)).
 
 !!! note "USB-C"
-    Don't use the PB2's USB-C port to power the controller. USB-C can't power the cape's Ethernet,
-    USB ports or outputs, and the PB2 does **not support USB tethering** for setup. Use Ethernet
-    for first setup.
+    Don't use the PB2's USB-C port to power the controller. USB-C powers only the PocketBeagle 2
+    itself, not the cape's Ethernet, USB ports or outputs. You can still connect it to a computer
+    for setup ([USB tethering](network-usb-rtc.md#usb-tethering)), **except on the K40D-PB**, where that can
+    damage the board.

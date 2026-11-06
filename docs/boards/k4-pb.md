@@ -20,6 +20,12 @@ slot.
     - **No real-time clock.** The board gets the time from the network (NTP).
     - **Not protected against a reversed supply.** Check the polarity before you power up.
 
+!!! danger "PocketBeagle 1: never connect its USB port to a computer"
+    With an original **PocketBeagle 1** fitted, don't power or set up the K4-PB through the
+    PocketBeagle's own USB port (USB tethering). It can **permanently damage** the K4-PB. Power it
+    only from its power terminal, and set it up over a USB network adapter. With a **PocketBeagle 2**,
+    [USB tethering](../hardware/network-usb-rtc.md#usb-tethering) is safe.
+
 ## Specifications
 
 | | K4-PB |
