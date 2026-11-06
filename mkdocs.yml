@@ -98,6 +98,7 @@ nav:
       - K32: boards/k32.md
       - K32-Pro: boards/k32-pro.md
       - K32-Max: boards/k32-max.md
+      - PocketScroller v2: boards/pocketscroller-v2.md
       - PocketScroller v3: boards/pocketscroller-v3.md
       - PocketScroller-16: boards/pocketscroller-16.md
   - Software (FPP):

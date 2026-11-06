@@ -12,7 +12,7 @@ FPP can drive them as:
 | K8-Pro, K8-Max, K16, K32 | 1 | `DMX` | P2-07 |
 | K16-Pro, K16-Max, K32-Pro, K32-Max | 2 | `DMX1`, `DMX2` | P2-07, P1-08 |
 | K8-PB | 1, on a 3-pin header | `ttyS2` | P1-10 |
-| PocketScroller v3, PocketScroller-16 | none | — | — |
+| PocketScroller v2, v3 and -16 | none | — | — |
 
 ## Pinout
 

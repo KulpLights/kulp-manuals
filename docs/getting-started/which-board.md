@@ -17,6 +17,7 @@ To tell them apart at a glance:
 | **32** pixel plugs with fuses, **4** port RJ45s, one `DMX` jack | [K32](../boards/k32.md) |
 | **32** pixel plugs with fuses, **8** port RJ45s, `DMX1`/`DMX2` | [K32-Pro](../boards/k32-pro.md) |
 | **32** pixel plugs, no fuses, **8** port RJ45s | [K32-Max](../boards/k32-max.md) |
+| **6** ribbon-cable (HUB75) headers along the bottom edge, no Ethernet jack | [PocketScroller v2](../boards/pocketscroller-v2.md) |
 | **8** ribbon-cable (HUB75) headers marked *Output 1–8* | [PocketScroller v3](../boards/pocketscroller-v3.md) |
 | **16** ribbon-cable (HUB75) headers in two rows, *Output 1–16* | [PocketScroller-16](../boards/pocketscroller-16.md) |
 
@@ -57,6 +58,10 @@ To tell them apart at a glance:
 -   ![K32-Max](../assets/boards/K32-Max-photo.webp){ loading=lazy }
 
     **K32-Max**
+
+-   ![PocketScroller v2](../assets/boards/PocketScrollerV2-photo.webp){ loading=lazy }
+
+    **PocketScroller v2**
 
 -   ![PocketScroller v3](../assets/boards/PocketScrollerV3-photo.webp){ loading=lazy }
 

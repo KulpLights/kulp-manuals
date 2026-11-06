@@ -3,7 +3,7 @@
 | Board | Audio |
 |---|---|
 | K8-Pro, K8-Max, K16-Pro, K16-Max, K32-Pro, K32-Max | Built-in stereo DAC, 3.5 mm line out, FM transmitter socket |
-| K16, K32, K8-PB, PocketScroller v3, PocketScroller-16 | None built in. Use a USB sound card. |
+| K16, K32, K8-PB, PocketScroller v2, v3 and -16 | None built in. Use a USB sound card. |
 
 ## Line output
 

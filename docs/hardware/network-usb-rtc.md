@@ -2,13 +2,13 @@
 
 ## Ethernet
 
-Every board except the K8-PB has one **Gigabit Ethernet** jack, the RJ45 with built-in LEDs. It connects
+Every board except the K8-PB and PocketScroller v2 has one **Gigabit Ethernet** jack, the RJ45 with built-in LEDs. It connects
 to the PocketBeagle 2 over USB 2.0, so real throughput is roughly **300 Mb/s**. That is
 far more than a show needs, even with hundreds of E1.31 universes.
 
 - Plug it into your show network switch or router.
 - Out of the box FPP uses **DHCP**. The IP address appears on the OLED.
-- **K8-PB:** there's no Ethernet jack. Plug a **USB Ethernet adapter** (or a USB Wi-Fi adapter)
+- **K8-PB and PocketScroller v2:** there's no Ethernet jack. Plug a **USB Ethernet adapter** (or a USB Wi-Fi adapter)
   into its USB-A port.
 - For networking topics (static IPs, show networks, reaching receivers or controllers
   behind FPP), see the FPP manual:
@@ -51,7 +51,7 @@ supported adapters.
 | Board | USB-A host ports |
 |---|---|
 | K8-Pro, K8-Max, K16-Pro, K16-Max, K32-Pro, K32-Max, PocketScroller v3, PocketScroller-16 | 3 (one vertical, plus a stacked pair) |
-| K16, K32, K8-PB | 1 |
+| K16, K32, K8-PB, PocketScroller v2 | 1 |
 
 Each port has its own current-limited power switch, about **0.5 A**. That's plenty
 for Wi-Fi adapters, sound cards and USB flash drives. Use a powered hub for anything
@@ -64,8 +64,9 @@ hungrier, such as a USB hard drive.
 
 ## Real-time clock (RTC)
 
-Every board has a battery-backed **real-time clock** (NXP PCF85263, or PCF85363 on the K8-PB), so schedules
-start at the right time even with no internet for NTP.
+Every board except the PocketScroller v2 has a battery-backed **real-time clock** (NXP PCF85263,
+or PCF85363 on the K8-PB), so schedules start at the right time even with no internet for NTP.
+The PocketScroller v2 has no clock, so set up NTP on it.
 
 - Every board takes a **CR1220** 3 V coin cell. On the K8 boards the holder is on the **underside**
   of the board.
@@ -77,6 +78,6 @@ start at the right time even with no internet for NTP.
 
 ## Temperature
 
-A **TMP1075** sensor on the board reports the board temperature. FPP shows it with the
+A **TMP1075** sensor on the board (an analog sensor on the PocketScroller v2) reports the board temperature. FPP shows it with the
 other sensors. Boards with a fan header use it to run the fan
 (see [Expansion header & fan](expansion.md#fan)).

@@ -21,7 +21,7 @@ which terminal feeds which ports.
 | K8-PB | 1 (5–18 V) | all 8 ports | the only terminal |
 | K16, K16-Pro, K16-Max | 4 | 4 ports | **V1**, upper left (ports 1–4) |
 | K32, K32-Pro, K32-Max | 8 | 4 ports | **V1**, top left (ports 1–4) |
-| PocketScroller v3, PocketScroller-16 | 1 (5 V only) | — | the only terminal |
+| PocketScroller v2, v3 and -16 | 1 (5 V only) | — | the only terminal |
 
 !!! important "One terminal also runs the controller"
     The PocketBeagle 2, network, USB, OLED and all of the controller's logic run from
@@ -39,7 +39,7 @@ which terminal feeds which ports.
   24 V; there is no extra headroom for 28 V or 36 V supplies.
 - **K8-PB:** one terminal, **5 V to 18 V DC**, for the controller and all eight ports. **No 24 V.**
   See the [K8-PB](../boards/k8-pb.md) page.
-- **PocketScroller v3 and PocketScroller-16:** **5 V DC only.** See their board pages.
+- **PocketScroller v2, v3 and -16:** **5 V DC only.** See their board pages.
 - A 5 V supply on the logic terminal is fine. The controller's internal 5 V regulator
   passes it straight through (about 4.96 V out from 5.0 V in), so 5 V-only setups need no
   separate supply.

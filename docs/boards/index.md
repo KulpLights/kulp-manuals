@@ -52,15 +52,18 @@ driver (BBB48String), so it has no Falcon V5 support. See the [K8-PB](k8-pb.md) 
 
 ## LED panels
 
-| | PocketScroller v3 | PocketScroller-16 |
-|---|---|---|
-| HUB75 outputs | 8 | 16 |
-| Power | 5 V only | 5 V only |
-| USB-A | 3 | 3 |
-| Expansion header | ✔ | ✔ |
-| Size (mm) | 122 × 101 | 122 × 144 |
-| Minimum FPP | 9.0 | 10.0 |
+| | PocketScroller v2 | PocketScroller v3 | PocketScroller-16 |
+|---|---|---|---|
+| HUB75 outputs | 6 | 8 | 16 |
+| Power | 5 V only | 5 V only | 5 V only |
+| Ethernet | none (USB adapter) | ✔ | ✔ |
+| USB-A | 1 | 3 | 3 |
+| Real-time clock | — | ✔ | ✔ |
+| Expansion header | — | ✔ | ✔ |
+| Size (mm) | 61 × 73 | 122 × 101 | 122 × 144 |
+| Minimum FPP | 9.5 on PB2 (10+ recommended) | 9.0 | 10.0 |
 
 ## All boards
 
-All of them need a **PocketBeagle 2** and run **FPP**. See [PocketBeagle 2](../hardware/pocketbeagle2.md).
+All of them need a **PocketBeagle 2** and run **FPP**. The PocketScroller v2 also works with the
+original PocketBeagle 1. See [PocketBeagle 2](../hardware/pocketbeagle2.md).

@@ -45,13 +45,13 @@ This manual covers the **hardware** of the Kulp Lights PocketBeagle 2 controller
 
     [:octicons-arrow-right-24: K32](boards/k32.md) · [K32-Pro](boards/k32-pro.md) · [K32-Max](boards/k32-max.md)
 
--   **PocketScroller v3 · PocketScroller-16**
+-   **PocketScroller v2 · v3 · -16**
 
     ---
 
-    8 or 16 HUB75 outputs for LED panel matrices.
+    6, 8 or 16 HUB75 outputs for LED panel matrices.
 
-    [:octicons-arrow-right-24: PocketScroller v3](boards/pocketscroller-v3.md) · [PocketScroller-16](boards/pocketscroller-16.md)
+    [:octicons-arrow-right-24: PocketScroller v2](boards/pocketscroller-v2.md) · [v3](boards/pocketscroller-v3.md) · [PocketScroller-16](boards/pocketscroller-16.md)
 
 </div>
 

@@ -2,7 +2,7 @@
 
 ## Expansion header (Exp)
 
-The **Pro** and **Max** boards and both **PocketScrollers** have a 2×6, 2.54 mm pin header
+The **Pro** and **Max** boards, the **PocketScroller v3** and the **PocketScroller-16** have a 2×6, 2.54 mm pin header
 marked **Exp**. It brings out the cape's I²C bus and **eight general-purpose I/O pins**,
 which FPP names `Exp.1` to `Exp.8`.
 

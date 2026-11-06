@@ -5,7 +5,8 @@ a small computer that runs FPP, and the cape adds the power, outputs and connect
 
 !!! danger "PocketBeagle 2 only"
     These capes **do not work with the original PocketBeagle (PocketBeagle 1)**. The two look
-    alike, but the PocketBeagle 2 has a different processor and pinout.
+    alike, but the PocketBeagle 2 has a different processor and pinout. The one exception is the
+    [PocketScroller v2](../boards/pocketscroller-v2.md), which works with either.
 
 ## Regular or Industrial
 

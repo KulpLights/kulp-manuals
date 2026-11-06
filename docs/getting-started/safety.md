@@ -34,7 +34,7 @@ side of your power supplies.
       pixels.
     - Every pixel port on a bank gets the voltage of that bank's power supply. Check
       that the supply voltage matches the pixels on **every** port in the bank.
-    - The **PocketScroller v3 and PocketScroller-16 accept 5 V only**. Do not connect 12 V or 24 V to them.
+    - The **PocketScrollers accept 5 V only**. Do not connect 12 V or 24 V to them.
 
 !!! warning "Outdoors"
     The controller is not waterproof. Outdoors, mount it in a weather-resistant enclosure
