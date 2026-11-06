@@ -10,6 +10,8 @@ side of your power supplies.
       controller only accepts DC from a power supply.
     - Have the AC side of your power supplies wired by someone qualified. Use
       grounded (3-prong) cords and close the terminal covers on the supply.
+    - If a supply has a **115V/230V** input switch, set it to match your mains before you plug
+      it in. The wrong setting can destroy the supply.
     - Unplug the AC before you touch the supply's output terminals or the controller's
       power terminals.
 

@@ -18,12 +18,15 @@ you know which step it was.
 2. [ ] Insert the SD card into the PocketBeagle 2, unless you are using eMMC.
 3. [ ] Wire **one** pixel string to **P1**: ground in **G**, data in **D**, +V in **V**. Check
        the pixel voltage matches your supply.
-4. [ ] Wire the supply to the **terminal that powers the controller**. That's the terminal
+4. [ ] Check the supply before connecting it: set its **115V/230V** input switch (if it has one) to
+       match your mains, then plug it in and measure the DC output with a multimeter. Unplug it
+       again before wiring. See [Check the supply](../hardware/power.md#check-the-supply-before-you-connect-it).
+5. [ ] Wire the supply to the **terminal that powers the controller**. That's the terminal
        for ports 1–4 on the K16 and K32, and the **right-hand** terminal on the K8 boards. On
        the K8 boards, P1 is fed from the left terminal, so for this test wire both K8 terminals,
        or use P5 instead. See [Power](../hardware/power.md#banks).
-5. [ ] Plug in the Ethernet cable.
-6. [ ] Plug the supply into the mains.
+6. [ ] Plug in the Ethernet cable.
+7. [ ] Plug the supply into the mains.
 
 **Check:** the blue power LEDs light, and within a minute or two the OLED shows the FPP logo and then
 the status page with an **IP address**. The first boot of a new SD card can take a few minutes longer.

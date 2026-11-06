@@ -66,6 +66,21 @@ map of which **VIN** reading belongs to which terminal. On the K32 boards, for e
   xLights if needed.
 - One supply can feed several banks, as long as each wire run is sized for its current.
 
+### Check the supply before you connect it
+
+Do this for every supply, new or used, **before** you wire it to the controller:
+
+1. **Set the AC input switch.** Many supplies have a small slide switch, often red, marked
+   **115V / 230V** (or 110V / 220V). Set it to match your mains: **115 V** in North America,
+   **230 V** in most of Europe, Asia and Australia. A supply set to 115 V and plugged into 230 V
+   mains is destroyed at once, and can catch fire. One set to 230 V on 115 V mains won't start
+   or gives a low output. Supplies without the switch accept either.
+2. **Measure the output.** With nothing connected to the DC side, plug the supply in and
+   measure across its **V+** and **V−** (COM) terminals with a multimeter. Check it reads the
+   voltage your pixels need (5, 12 or 24 V) and that + and − are where you expect. If it is
+   slightly off, most supplies have a **V.ADJ** trim pot next to the terminals.
+3. **Unplug the supply** and wait for its LED to go out before you wire it to the controller.
+
 ### Wire size
 
 Use copper wire sized for the **highest current that wire can carry**. That means the
