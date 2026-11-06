@@ -11,6 +11,7 @@ Where the readings come from depends on the board:
 | Board | Local ports | Differential ports |
 |---|---|---|
 | **Max** (K8-Max, K16-Max, K32-Max) | current, on/off and eFuse status for every port | from Falcon V5 receivers |
+| **K8-PB** | current, on/off and eFuse status for every port | none (send-only) |
 | **Pro** (K8-Pro, K16-Pro, K32-Pro) | none (fused ports) | from Falcon V5 receivers |
 | K16, K32 | none | none (send-only) |
 
@@ -31,7 +32,7 @@ See [Port Status](https://manual.falconplayer.com/014-port-status/) in the FPP m
 
 1. FPP turns the port off, shows a warning banner, and marks it with a red icon.
 2. **Find the cause**: a short in a pigtail or connector, water ingress, a damaged string, or
-   a string drawing more than about 6 A.
+   a string drawing more than about 6 A (about 5.2 A on the K8-PB).
 3. Click the red icon to reset the port. Power-cycling the controller also resets every port.
 
 If the trip happens again straight away, the fault is still there.

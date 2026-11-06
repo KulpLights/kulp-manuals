@@ -3,7 +3,8 @@
 FPP's own manual covers setup in detail. This page lists what's specific to these boards.
 
 1. **Connect Ethernet.** The PocketBeagle 2 has no USB tethering, so first setup goes over the
-   network. With no Ethernet, use a USB Wi-Fi adapter and FPP's hotspot (see below).
+   network. With no Ethernet, use a USB Wi-Fi adapter and FPP's hotspot (see below). The K8-PB has
+   no Ethernet jack: use a USB Ethernet adapter, or a USB Wi-Fi adapter.
 2. **Power up.** The OLED shows the IP address once the network is up.
 3. **Browse to the IP address** (or `http://fpp.local`) and follow FPP's
    [initial configuration](https://manual.falconplayer.com/006-quickstart/#initial-configuration).

@@ -38,7 +38,7 @@ Kulp Lights sells the boards with or without a PB2 already fitted:
 The PocketBeagle 2 fits the same way round on **every** board in this manual: its **USB-C connector
 faces the right-hand edge** of the board, the edge opposite the buttons and the Exp header. Its
 **P1** header goes into the cape socket marked **P1** (the one nearer the Ethernet and USB
-connectors), and **P2** into **P2**.
+connectors; on the K8-PB, the upper one), and **P2** into **P2**.
 
 If your board came without a PB2 fitted:
 

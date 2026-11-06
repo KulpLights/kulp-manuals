@@ -1,7 +1,8 @@
 # Controls & display
 
 Every board has a small **OLED display** and five buttons: **Up**, **Down**, **Enter**,
-**Back** and **Test**. From them you can check status, read the IP address, change modes
+**Back** and **Test**. The K8-PB has four: **Down** and **Test** share one button, marked
+*Down Test*. On the status page it works as **Test**; in menus it works as **Down**. From them you can check status, read the IP address, change modes
 and run test patterns without a computer.
 
 ## The OLED
@@ -72,4 +73,6 @@ ports (Pro/Max), FPP powers the ports for the test.
 | Ethernet jack | left / right | Link (left) and activity (right). See [Network](network-usb-rtc.md). |
 | On the PocketBeagle 2 | various | Boot and activity (see [PocketBeagle 2](pocketbeagle2.md)) |
 
-The PocketScrollers have no power LEDs; check the OLED and the Ethernet LEDs instead.
+The PocketScrollers have no power LEDs; check the OLED and the Ethernet LEDs instead. The K8-PB
+has no Ethernet jack; its two blue LEDs are on the right-hand edge (see its
+[board page](../boards/k8-pb.md#power-terminal)).

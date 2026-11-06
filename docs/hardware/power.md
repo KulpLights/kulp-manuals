@@ -12,12 +12,13 @@ so a bank must be wired to a supply that matches the pixels on all four of its p
 - The [differential ports](differential.md) carry **data only**. Strings on differential
   receivers are powered at the receiver.
 
-The terminals are marked on the board **V+ 5-24V** and **G/V−**. Each board page shows
+The terminals are marked on the board **V+ 5-24V** and **G/V−** (**V+ 5-18V** and **G** on the K8-PB). Each board page shows
 which terminal feeds which ports.
 
 | Board | Power terminals | Bank size | Terminal that also powers the controller |
 |---|---|---|---|
 | K8-Pro, K8-Max | 2 | 4 ports | the **right-hand** terminal (ports 5–8) |
+| K8-PB | 1 (5–18 V) | all 8 ports | the only terminal |
 | K16, K16-Pro, K16-Max | 4 | 4 ports | **V1**, upper left (ports 1–4) |
 | K32, K32-Pro, K32-Max | 8 | 4 ports | **V1**, top left (ports 1–4) |
 | PocketScroller v3, PocketScroller-16 | 1 (5 V only) | — | the only terminal |
@@ -33,9 +34,11 @@ which terminal feeds which ports.
 
 ## Voltage
 
-- **K-series boards:** each terminal accepts **5 V to 24 V DC** (as printed next to the
+- **K8, K16 and K32 boards:** each terminal accepts **5 V to 24 V DC** (as printed next to the
   terminal). Use a regulated 5 V, 12 V or 24 V LED power supply. Do not go above
   24 V; there is no extra headroom for 28 V or 36 V supplies.
+- **K8-PB:** one terminal, **5 V to 18 V DC**, for the controller and all eight ports. **No 24 V.**
+  See the [K8-PB](../boards/k8-pb.md) page.
 - **PocketScroller v3 and PocketScroller-16:** **5 V DC only.** See their board pages.
 - A 5 V supply on the logic terminal is fine. The controller's internal 5 V regulator
   passes it straight through (about 4.96 V out from 5.0 V in), so 5 V-only setups need no
@@ -43,9 +46,12 @@ which terminal feeds which ports.
 
 ### Reverse polarity
 
-Each power input has an *ideal diode* in series. If a supply is wired backwards, that
-bank simply stays off; nothing on the controller is damaged. Fix the wiring and the
-bank will come up. Pixels have no such protection; see [Safety](../getting-started/safety.md).
+On the K8, K16 and K32 boards each power input has an *ideal diode* in series. If a supply is
+wired backwards, that bank simply stays off; nothing on the controller is damaged. Fix the
+wiring and the bank will come up.
+
+The **K8-PB is not protected** this way: a reversed supply can damage it. Check the polarity
+before you power up. Pixels have no such protection; see [Safety](../getting-started/safety.md).
 
 ### Voltage readings in FPP
 
@@ -113,6 +119,7 @@ model:
 | **K16, K32** | 5 A mini-blade fuse | no | no |
 | **K8-Pro, K16-Pro, K32-Pro** | 5 A mini-blade fuse | yes, **per bank of 4**[^banks] | only from Falcon V5 receivers |
 | **K8-Max, K16-Max, K32-Max** | **eFuse, about 6 A** | yes, **per port** | **yes, every port** |
+| **K8-PB** | **eFuse, about 5.2 A** | yes, **per port** | **yes, every port** |
 
 ### Mini-blade fuses (K16, K32 and the Pro boards)
 
@@ -126,12 +133,13 @@ model:
   pigtail, a pinched wire, water in a connector) before you replace it.
 
 
-### eFuses (Max boards)
+### eFuses (Max boards and K8-PB)
 
-The Max boards replace each port's fuse with an **eFuse**, an electronic fuse that FPP
-can switch on and off and read back.
+The Max boards and the K8-PB replace each port's fuse with an **eFuse**, an electronic fuse
+that FPP can switch on and off and read back.
 
-- **Trip point:** about **6 A** per port (5.6–6.4 A). A hard short trips it at once.
+- **Trip point:** about **6 A** per port (5.6–6.4 A) on the Max boards, about **5.2 A** on the
+  K8-PB. A hard short trips it at once.
 - **When it trips** the port turns off and **stays off** (it latches). The port's LED goes
   dark, FPP shows a warning, and the [Port Status](../software/current-monitoring.md)
   page marks the port as tripped.

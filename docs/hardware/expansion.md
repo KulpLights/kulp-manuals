@@ -17,6 +17,9 @@ Use them for:
 The pin positions differ between boards, so check the numbers printed next to the
 header.
 
+The **K8-PB** has a different, 24-pin expansion port that drives 16 extra pixel strings through a
+Falcon F16v4-style expansion board. See its [board page](../boards/k8-pb.md#expansion-port-strings-2136).
+
 === "K8, K16 and K32 Pro & Max"
 
     | Pin | Signal | Pin | Signal |

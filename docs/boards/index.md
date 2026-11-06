@@ -33,6 +33,23 @@ monitored. †Bank switching on the K16-Pro and K32-Pro starts at board revision
 - **Max:** everything in Pro, plus an **eFuse on every port**. FPP can switch each port and read
   its current, and a short is cut in microseconds and reported in FPP instead of blowing a fuse.
 
+## Compact controller: K8-PB
+
+| | K8-PB |
+|---|---|
+| Local pixel ports | 8, eFused, per-port current reading and power control |
+| Differential ports (strings) | 3 (12), send-only |
+| Expansion port | 16 strings, through a Falcon F16v4-style expansion board |
+| **Total strings** | **36** |
+| Power input | 1 terminal, **5–18 V**, for the controller and all ports |
+| DMX / serial | 1, on a 3-pin header |
+| Ethernet | **none**: add a USB Ethernet or Wi-Fi adapter |
+| USB-A | 1 |
+| Size (mm) | 74 × 97 |
+
+The K8-PB is the smallest of the pixel controllers. It uses an older output
+driver (BBB48String), so it has no Falcon V5 support. See the [K8-PB](k8-pb.md) page.
+
 ## LED panels
 
 | | PocketScroller v3 | PocketScroller-16 |
