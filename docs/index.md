@@ -87,8 +87,30 @@ This manual covers the **hardware** of the Kulp Lights controllers.
 
 </div>
 
-Every one of these boards is a *cape* for a **PocketBeagle 2** or a **BeagleBone Black** and runs
-**FPP (Falcon Player)**. FPP is the software that plays your show, and it has its own
+## Raspberry Pi controllers
+
+<div class="grid cards" markdown>
+
+-   **K8-Pi**
+
+    ---
+
+    8 eFused pixel ports + 3 differential ports and an expansion port: 36 strings.
+
+    [:octicons-arrow-right-24: K8-Pi](boards/k8-pi.md)
+
+-   **K2-Pi-Servo · K2-Pi0**
+
+    ---
+
+    2 eFused pixel ports, plus 16 servo outputs (K2-Pi-Servo) or on a Pi Zero (K2-Pi0).
+
+    [:octicons-arrow-right-24: K2-Pi-Servo](boards/k2-pi-servo.md) · [K2-Pi0](boards/k2-pi0.md)
+
+</div>
+
+Every one of these boards is a *cape* (or *hat*) for a **PocketBeagle 2**, a **BeagleBone Black**
+or a **Raspberry Pi** and runs **FPP (Falcon Player)**. FPP is the software that plays your show, and it has its own
 manual at **[manual.falconplayer.com](https://manual.falconplayer.com)**. This manual
 doesn't repeat that one. It covers what the FPP manual can't:
 

@@ -27,6 +27,9 @@ To tell them apart at a glance:
 | **16** RJ45 jacks in a 4 × 4 grid, a BeagleBone upside down on top | [K64D-B](../boards/k64d-b.md) |
 | **32** RJ45 jacks in 8 rows of 4, a BeagleBone upside down on top | [K128D-B](../boards/k128d-b.md) |
 | **8** ribbon-cable (HUB75) headers in two rows of four, on a cape the size of a BeagleBone | [OctoPlus](../boards/octoplus.md) |
+| **8** green pixel plugs, no fuses, **3** RJ45s along the top, a Raspberry Pi underneath | [K8-Pi](../boards/k8-pi.md) |
+| **2** pixel plugs and **16** three-pin servo headers, on a Raspberry Pi | [K2-Pi-Servo](../boards/k2-pi-servo.md) |
+| **2** pixel plugs on a small (65 × 30 mm) board, on a Raspberry Pi Zero | [K2-Pi0](../boards/k2-pi0.md) |
 
 <div class="grid cards" markdown>
 
@@ -106,13 +109,25 @@ To tell them apart at a glance:
 
     **OctoPlus**
 
+-   ![K8-Pi](../assets/boards/K8-Pi-photo.webp){ loading=lazy }
+
+    **K8-Pi**
+
+-   ![K2-Pi-Servo](../assets/boards/K2-Pi-Servo-photo.webp){ loading=lazy }
+
+    **K2-Pi-Servo**
+
+-   ![K2-Pi0](../assets/boards/K2-Pi0-photo.webp){ loading=lazy }
+
+    **K2-Pi0**
+
 </div>
 
 For a feature-by-feature comparison, see [Boards](../boards/index.md).
 
 !!! note "Older Kulp boards"
-    This manual covers the **PocketBeagle 2** boards and the BeagleBone Black boards Kulp Lights
-    sells now. Some older BeagleBone Black and PocketBeagle 1 boards have their own manuals:
+    This manual covers the **PocketBeagle 2** boards and the BeagleBone Black and Raspberry Pi
+    boards Kulp Lights sells now. Some older BeagleBone Black and PocketBeagle 1 boards have their own manuals:
 
     - [K16A-B](https://kulplights.com/manuals/K16A-B-Manual.pdf)
     - [F8-B](https://kulplights.com/manuals/F8-B-Manual.pdf)

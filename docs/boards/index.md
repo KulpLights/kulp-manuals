@@ -86,8 +86,29 @@ All five are capes for the **BeagleBone Black**, which provides the Ethernet and
 differential ports are send-only: smart receivers work in v1, v2 or V4 mode. See
 [BeagleBone Black](../hardware/beaglebone-black.md).
 
+## Raspberry Pi boards
+
+| | K8-Pi | K2-Pi-Servo | K2-Pi0 |
+|---|---|---|---|
+| Local pixel ports | 8, eFused | 2, eFused | 2, eFused |
+| Differential ports (strings) | 3 (12) | — | — |
+| Expansion port | 16 strings | — | — |
+| Servo outputs | — | **16** | — |
+| **Total strings** | **36** | **2** | **2** |
+| Power input | **5–18 V** | 5–24 V (+ servo supply) | 5–24 V |
+| DMX / serial | 1 (header) | — | — |
+| Display & buttons | ✔ | ✔ | — |
+| Real-time clock | ✔ | — | — |
+| Raspberry Pi | 3 B+, 4, 5 | 3 B+, 4, 5 | Zero 2 W |
+| Size (mm) | 98 × 106 | 76 × 56 | 65 × 30 |
+
+All three are hats for the **Raspberry Pi**, which provides the network and USB ports. FPP drives
+their pixel ports with its DPIPixels output: up to 1600 pixels per string, with smart receivers in
+v1 or v2 mode. See [Raspberry Pi](../hardware/raspberry-pi.md).
+
 ## All boards
 
-All of them run **FPP**. The boards above the BeagleBone Black section need a **PocketBeagle 2**;
+All of them run **FPP**. The boards in the PocketBeagle 2 section need a **PocketBeagle 2**;
 the K4-PB, K40D-PB and PocketScroller v2 also work with the original PocketBeagle 1. See
-[PocketBeagle 2](../hardware/pocketbeagle2.md) and [BeagleBone Black](../hardware/beaglebone-black.md).
+[PocketBeagle 2](../hardware/pocketbeagle2.md), [BeagleBone Black](../hardware/beaglebone-black.md)
+and [Raspberry Pi](../hardware/raspberry-pi.md).

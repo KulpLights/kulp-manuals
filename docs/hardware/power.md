@@ -12,7 +12,7 @@ so a bank must be wired to a supply that matches the pixels on all four of its p
 - The [differential ports](differential.md) carry **data only**. Strings on differential
   receivers are powered at the receiver.
 
-The terminals are marked on the board **V+ 5-24V** and **G/V−** (**V+ 5-18V** and **G** on the K8-PB, **V+** and **GND** on the K4-PB, K8-B and K8-B-Scroller). Each board page shows
+The terminals are marked on the board **V+ 5-24V** and **G/V−** (**V+ 5-18V** and **G** on the K8-PB, **V+** and **GND** on the K4-PB, K8-B and K8-B-Scroller, **V+** and **G** on the Pi boards). Each board page shows
 which terminal feeds which ports.
 
 | Board | Power terminals | Bank size | Terminal that also powers the controller |
@@ -26,6 +26,9 @@ which terminal feeds which ports.
 | PocketScroller v2, v3 and -16 | 1 (5 V only) | — | the only terminal |
 | K8-B, K8-B-Scroller | 1 (5–18 V) | all 8 ports | the only terminal |
 | K64D-B, K128D-B, OctoPlus | 1 (5 V only) | — | the only terminal |
+| K8-Pi | 1 (5–18 V) | all 8 ports | the only terminal |
+| K2-Pi0 | 1 (5–24 V) | both ports | the only terminal |
+| K2-Pi-Servo | 2: pixels (5–24 V) and servos | both pixel ports | the **top** (pixel) terminal |
 
 !!! important "One terminal also runs the controller"
     The PocketBeagle 2 or BeagleBone, network, USB, OLED and all of the controller's logic
@@ -49,6 +52,11 @@ which terminal feeds which ports.
 - **PocketScroller v2, v3 and -16:** **5 V DC only.** See their board pages.
 - **K8-B and K8-B-Scroller:** one terminal, **5 V to 18 V DC**, for the controller and all the
   ports. **No 24 V.**
+- **K8-Pi:** one terminal, **5 V to 18 V DC**, for the Pi and all the ports. **No 24 V.**
+- **K2-Pi-Servo and K2-Pi0:** **5 V to 24 V DC** for the Pi and the pixel ports. The K2-Pi-Servo's
+  servos have their own terminal, typically 5–6 V.
+- **Raspberry Pi boards on 5 V:** turn the supply up to about 5.3 V; see
+  [Raspberry Pi → Powering](raspberry-pi.md#powering).
 - **K64D-B, K128D-B and OctoPlus:** **5 V DC only**, for the controller alone (3 A or more for the
   K64D-B, 4 A or more for the K128D-B). Their strings are powered at the receivers, and the
   OctoPlus's panels from their own supply.
@@ -64,7 +72,8 @@ wiring and the bank will come up.
 
 The **K8-PB and K4-PB are not protected** this way: a reversed supply can damage them. On the
 **K8-B and K8-B-Scroller** the BeagleBone and the logic are protected, but a reversed supply goes
-straight through the fuses to the pixel ports. The **K64D-B** isn't protected either. Check the
+straight through the fuses to the pixel ports. The **K64D-B** isn't protected either. On the **Raspberry Pi boards** the Pi and the logic are
+protected, but the pixel ports aren't. Check the
 polarity before you power up. Pixels have no such protection; see [Safety](../getting-started/safety.md).
 
 ### Voltage readings in FPP
@@ -135,6 +144,8 @@ model:
 | **K8-Max, K16-Max, K32-Max** | **eFuse, about 6 A** | yes, **per port** | **yes, every port** |
 | **K8-PB, K4-PB** | **eFuse, about 5.2 A** | yes, **per port** | **yes, every port** |
 | **K8-B, K8-B-Scroller** | 5 A mini-blade fuse | no | no |
+| **K8-Pi** (v2.x) | **eFuse, about 5.2 A** | yes, **per port** | **yes, every port** |
+| **K2-Pi-Servo, K2-Pi0** | **eFuse, about 6 A** | yes, **per port** | **yes, every port** |
 
 ### Mini-blade fuses (K16, K32, the Pro boards, K8-B and K8-B-Scroller) { #mini-blade-fuses-k16-k32-and-the-pro-boards }
 
@@ -148,13 +159,13 @@ model:
   pigtail, a pinched wire, water in a connector) before you replace it.
 
 
-### eFuses (Max boards, K8-PB and K4-PB) { #efuses-max-boards }
+### eFuses (Max boards, K8-PB, K4-PB and the Pi boards) { #efuses-max-boards }
 
 The Max boards, the K8-PB and the K4-PB replace each port's fuse with an **eFuse**, an electronic fuse
 that FPP can switch on and off and read back.
 
-- **Trip point:** about **6 A** per port (5.6–6.4 A) on the Max boards, about **5.2 A** on the
-  K8-PB and K4-PB. A hard short trips it at once.
+- **Trip point:** about **6 A** per port (5.6–6.4 A) on the Max boards, the K2-Pi-Servo and the
+  K2-Pi0, and about **5.2 A** on the K8-PB, K4-PB and K8-Pi. A hard short trips it at once.
 - **When it trips** the port turns off and **stays off** (it latches). The port's LED goes
   dark, FPP shows a warning, and the [Port Status](../software/current-monitoring.md)
   page marks the port as tripped.

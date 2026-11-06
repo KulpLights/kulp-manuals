@@ -80,6 +80,7 @@ nav:
   - Hardware:
       - PocketBeagle 2: hardware/pocketbeagle2.md
       - BeagleBone Black: hardware/beaglebone-black.md
+      - Raspberry Pi: hardware/raspberry-pi.md
       - Power: hardware/power.md
       - Pixel outputs: hardware/pixel-outputs.md
       - Differential ports: hardware/differential.md
@@ -111,6 +112,10 @@ nav:
           - K64D-B: boards/k64d-b.md
           - K128D-B: boards/k128d-b.md
           - OctoPlus: boards/octoplus.md
+      - Raspberry Pi:
+          - K8-Pi: boards/k8-pi.md
+          - K2-Pi-Servo: boards/k2-pi-servo.md
+          - K2-Pi0: boards/k2-pi0.md
   - Software (FPP):
       - First boot: software/first-boot.md
       - Configuring outputs: software/outputs.md

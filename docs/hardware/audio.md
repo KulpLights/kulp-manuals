@@ -5,6 +5,8 @@
 | K8-Pro, K8-Max, K16-Pro, K16-Max, K32-Pro, K32-Max | Built-in stereo DAC, 3.5 mm line out, FM transmitter socket |
 | K64D-B, K128D-B | Built-in stereo DAC, 3.5 mm line out, FM transmitter socket |
 | K16, K32, K8-PB, K4-PB, K40D-PB, PocketScroller v2, v3 and -16, K8-B, K8-B-Scroller, OctoPlus | None built in. Use a USB sound card. |
+| K8-Pi, K2-Pi-Servo | The Pi 3 B+ or Pi 4's own audio jack (the Pi 5 has none), or a USB sound card. |
+| K2-Pi0 | None (the Pi Zero has no audio output). Use a USB sound card on the Pi's USB port. |
 
 ## Line output
 

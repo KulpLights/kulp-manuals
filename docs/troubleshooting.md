@@ -25,6 +25,8 @@ goes further.
 - **BeagleBone Black boards:** an older BeagleBone (before about 2019) boots its own eMMC instead
   of the SD card. Hold its **Boot** button while you power up; see
   [Booting from the SD card](hardware/beaglebone-black.md#booting-from-the-sd-card).
+- **Raspberry Pi boards:** check the hat is on all 40 header pins, not shifted by a row or column
+  ([Raspberry Pi](hardware/raspberry-pi.md#fitting-the-hat)).
 - **BeagleBone Black boards:** if FPP was shut down, the BeagleBone stays off until you press the
   cape's **Power** button or switch the supply off and on.
 - If FPP is reachable on the network but the OLED is dark, check *Settings → System → Status Display*.

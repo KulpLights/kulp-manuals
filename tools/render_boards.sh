@@ -3,7 +3,7 @@
 # Usage: tools/render_boards.sh <path-to-bbb-capes> <out-dir>
 K=${KICAD_CLI:-/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli}
 B=$1; O=$2; mkdir -p "$O"
-for p in K8-Pro/K8-Pro K8-Max/K8-Max K8PB/K8PB K4PB/K4PB K40DPB/K40DPB K16/K16 K16-Pro/K16-Pro K16-Max/K16-Max K32/K32 K32-Pro/K32-Pro K32-Max/K32-Max PocketScroller/PocketScroller PocketScrollerV3/PocketScroller PocketScrollerV3-16/PocketScrollerV3-16 K8B/K8B K8Scroller/K8Scroller K64D-B/K64D-B K128D-B/K128D-B Octo2/Octo2; do
+for p in K8-Pro/K8-Pro K8-Max/K8-Max K8PB/K8PB K4PB/K4PB K40DPB/K40DPB K16/K16 K16-Pro/K16-Pro K16-Max/K16-Max K32/K32 K32-Pro/K32-Pro K32-Max/K32-Max PocketScroller/PocketScroller PocketScrollerV3/PocketScroller PocketScrollerV3-16/PocketScrollerV3-16 K8B/K8B K8Scroller/K8Scroller K64D-B/K64D-B K128D-B/K128D-B Octo2/Octo2 K8-Pi/K8-Pi K2-Pi-Servo/K2-Pi-Servo K2-Pi0/K2-Pi0; do
   n=${p%%/*}
   "$K" pcb render -o "$O/$n-top.png" -w 2400 -h 1800 --zoom 0.85 --side top --quality high --background transparent "$B/$p.kicad_pcb"
   "$K" pcb render -o "$O/$n-iso.png" -w 2400 -h 1800 --zoom 0.7 --side top --rotate '-35,0,25' --perspective --quality high --background transparent "$B/$p.kicad_pcb"

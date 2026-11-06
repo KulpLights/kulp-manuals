@@ -7,7 +7,7 @@ FPP can drive them as:
 - **Pixelnet**
 - **Renard** and **LOR** (Light-O-Rama) networks
 
-| Board | Serial outputs | FPP name | PocketBeagle / BeagleBone pin |
+| Board | Serial outputs | FPP name | Pin |
 |---|---|---|---|
 | K8-Pro, K8-Max, K16, K32 | 1 | `DMX` | P2-07 |
 | K16-Pro, K16-Max, K32-Pro, K32-Max | 2 | `DMX1`, `DMX2` | P2-07, P1-08 |
@@ -18,6 +18,8 @@ FPP can drive them as:
 | K8-B, K8-B-Scroller | 2, on a 2×3 header | `ttyS1`, `ttyS2` | P9-24, P9-21 |
 | K64D-B, K128D-B | 2, RJ45 with a DMX/LOR switch | `ttyS1`, `ttyS2` | P9-24, P9-21 |
 | OctoPlus | none | — | — |
+| K8-Pi | 1, on a 3-pin header | `ttyAMA0` | Pi GPIO14 (pin 8) |
+| K2-Pi-Servo, K2-Pi0 | none | — | — |
 
 ## Pinout
 
