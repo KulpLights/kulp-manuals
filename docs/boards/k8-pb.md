@@ -107,22 +107,31 @@ The 24-pin, 2×12 shrouded header on the left edge carries **16 more pixel data 
 compatible with **Falcon F16v4 expansion boards**, which turn the 16 lines into pixel ports with
 their own power.
 
-| Pin | Signal | Pin | Signal |
-|---|---|---|---|
-| 1 | GND | 2 | GND |
-| 3 | +5 V | 4 | +5 V |
-| 5 | String 21 | 6 | String 22 |
-| 7 | String 23 | 8 | String 24 |
-| 9 | String 25 | 10 | String 26 |
-| 11 | String 27 | 12 | String 28 |
-| 13 | String 29 | 14 | String 30 |
-| 15 | String 31 | 16 | String 32 |
-| 17 | String 33 | 18 | String 34 |
-| 19 | String 35 | 20 | String 36 |
-| 21 | — | 22 | GND |
-| 23 | — | 24 | — |
+| Pin | Signal | PocketBeagle pin | Pin | Signal | PocketBeagle pin |
+|---|---|---|---|---|---|
+| 1 | GND | — | 2 | GND | — |
+| 3 | +5 V | — | 4 | +5 V | — |
+| 5 | String 21 | P1-35 | 6 | String 22 | P1-34 |
+| 7 | String 23 | P1-32 | 8 | String 24 | P1-30 |
+| 9 | String 25 | P2-20 | 10 | String 26 | P2-35 |
+| 11 | String 27 | P1-20 | 12 | String 28 | P1-12 |
+| 13 | String 29 | P1-08 | 14 | String 30 | P1-06 |
+| 15 | String 31 | P1-04 | 16 | String 32 | P2-17 |
+| 17 | String 33 | P1-02 | 18 | String 34 | P2-07 |
+| 19 | String 35 | P2-05 | 20 | String 36 | P2-03 |
+| 21 | — | — | 22 | GND | — |
+| 23 | — | — | 24 | — | — |
 
 Pin 1 is at the top of the header, on the outer (board-edge) row.
+
+#### Using the expansion lines as GPIO
+
+Each data line is wired straight to the PocketBeagle pin shown, so you can use the header for
+**GPIO inputs** such as push buttons instead of pixels. FPP only takes over a line when its string
+has pixels configured, and strings 21–36 have none by default. Leave a string at **0 pixels** (and
+with no smart receiver on it) and its pin is free for FPP's *GPIO Inputs*, where it appears under
+the PocketBeagle pin name. The lines are **3.3 V only**: wire buttons to switch the pin to GND, choose the
+**pull-up** mode for the input in FPP, and never connect anything above 3.3 V.
 
 !!! warning "Not for pixels directly"
     The data lines on this header come straight from the PocketBeagle 2 at **3.3 V**, with no
