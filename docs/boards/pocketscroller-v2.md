@@ -7,8 +7,8 @@ Six HUB75 outputs for LED panel matrices, on a small board that works with eithe
 <small>PocketScroller v2 (v2.2) shown with an original PocketBeagle (PocketBeagle 1) fitted.</small>
 
 This page covers the PocketScroller v2, printed on the board as `PocketScroller+ v2.x` (the current
-revision is v2.3). It is the only board in this manual that works with **both** the PocketBeagle 2
-and the original PocketBeagle 1.
+revision is v2.3). Like the K4-PB, it works with **both** the PocketBeagle 2 and the original
+PocketBeagle 1.
 
 !!! warning "How the PocketScroller v2 differs from the other boards"
     - **No Ethernet on the board.** Plug a **USB Ethernet adapter** or an FPP-supported

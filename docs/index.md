@@ -21,13 +21,13 @@ This manual covers the **hardware** of the Kulp Lights PocketBeagle 2 controller
 
     [:octicons-arrow-right-24: K8-Pro](boards/k8-pro.md) · [K8-Max](boards/k8-max.md)
 
--   **K8-PB**
+-   **K8-PB · K4-PB**
 
     ---
 
-    Compact: 8 local pixel ports + 3 differential ports + a 16-string expansion port.
+    Compact: 8 or 4 local pixel ports. The K8-PB adds 3 differential ports and a 16-string expansion port.
 
-    [:octicons-arrow-right-24: K8-PB](boards/k8-pb.md)
+    [:octicons-arrow-right-24: K8-PB](boards/k8-pb.md) · [K4-PB](boards/k4-pb.md)
 
 -   **K16 · K16-Pro · K16-Max**
 

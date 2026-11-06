@@ -1,6 +1,6 @@
 # Pixel outputs
 
-The local pixel ports are labelled **P1**, **P2**, … on the board (**PT1**, **PT2**, … on the K8-PB). Each is a
+The local pixel ports are labelled **P1**, **P2**, … on the board (**PT1**, **PT2**, … on the K8-PB and K4-PB). Each is a
 **3-pin, 3.5 mm pluggable (Phoenix-style) connector**, and the plugs come with the board. The
 plug pulls straight off the board, so you can wire your pigtails at the bench and plug them in
 on site. Spare plugs, in screw or spring-clamp ("Advanced") styles, are sold as

@@ -28,8 +28,8 @@ side of your power supplies.
 !!! warning "Polarity and voltage"
     - Check **V+** and **G/V−** on every terminal before you power up. On the K8, K16 and K32
       boards the power inputs have reverse-polarity protection, so reversed power won't damage
-      the controller; that bank simply stays off. **The K8-PB has no such protection**, and a
-      reversed supply can damage it. **Pixels have no such protection either.** Wiring a pixel
+      the controller; that bank simply stays off. **The K8-PB and K4-PB have no such protection**,
+      and a reversed supply can damage them. **Pixels have no such protection either.** Wiring a pixel
       string backwards, or running 5 V pixels from a 12 V bank, will destroy the
       pixels.
     - Every pixel port on a bank gets the voltage of that bank's power supply. Check
