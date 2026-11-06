@@ -176,6 +176,9 @@ power. See [Board revisions](#board-revisions)."""
         else:
             rows = '''| **v4.0** | eFused ports with current monitoring. Fan speed control. |
 | **v4.1** | Adds **fan speed monitoring**. |'''
+        if b['slug'] == 'k32-max':
+            rows += '''
+| **v4.2** | Adds a dedicated **audio clock oscillator**. |'''
         revs = f'''## Board revisions
 
 The revision is printed on the board next to the model name. FPP also shows it as the
@@ -188,7 +191,7 @@ The revision is printed on the board next to the model name. FPP also shows it a
 '''
     silk_note = ''
     if b['slug'] in ('k32-pro','k32-max'):
-        silk_note = "\n\n!!! note\n    The last differential jack is printed **60-64** on the board. It carries strings **61–64**."
+        silk_note = "\n\n!!! note\n    On earlier boards the last differential jack is printed **60-64**. It carries strings **61–64**."
     feats = []
     feats.append(f"| Local pixel ports | {b['local']} (P1–P{b['local']}), 3-pin 3.5 mm pluggable, plugs included |")
     feats.append(f"| Port protection | {b['prot']} |")
