@@ -1,0 +1,80 @@
+# Network, USB & clock
+
+## Ethernet
+
+Every board has one **Gigabit Ethernet** jack, the RJ45 with built-in LEDs. It connects
+to the PocketBeagle 2 over USB 2.0, so real throughput is roughly **300 Mb/s**. That is
+far more than a show needs, even with hundreds of E1.31 universes.
+
+- Plug it into your show network switch or router.
+- Out of the box FPP uses **DHCP**. The IP address appears on the OLED.
+- For networking topics (static IPs, show networks, reaching receivers or controllers
+  behind FPP), see the FPP manual:
+  [Network](https://manual.falconplayer.com/016-network/) ·
+  [Networking overview](https://manual.falconplayer.com/108-networking-overview/) ·
+  [Proxies](https://manual.falconplayer.com/024-proxy/).
+
+!!! danger "Only one RJ45 is Ethernet"
+    The DMX and differential RJ45 jacks look the same but are **not** network ports. Never
+    plug them into a switch or PC.
+
+The Ethernet jack has two built-in LEDs. Left and right are as seen in the photo at the top of
+each board page, with the board laid flat and the Ethernet jack on the top edge:
+
+| LED | Meaning |
+|---|---|
+| **Left** | **Link.** On when the cable is connected to a working switch or router port. |
+| **Right** | **Activity.** Flashes as network traffic passes. |
+
+If the link LED stays off, check the cable and the switch port before anything else.
+
+## Wi-Fi
+
+The PocketBeagle 2 has no built-in Wi-Fi. Plug an FPP-supported **USB Wi-Fi adapter**
+into a USB-A port to get:
+
+- Wi-Fi as a second network
+- FPP's **hotspot (tethering)** mode, for setup in the field
+
+See the FPP manual's [hardware list](https://manual.falconplayer.com/004-hardware/) for
+supported adapters.
+
+!!! note "No USB tethering on PocketBeagle 2"
+    Older BeagleBone controllers could be set up over a USB cable to a PC. The
+    PocketBeagle 2 **does not support USB tethering**. Use Ethernet, or a Wi-Fi adapter in
+    hotspot mode, for first setup.
+
+## USB ports
+
+| Board | USB-A host ports |
+|---|---|
+| K8-Pro, K8-Max, K16-Pro, K16-Max, K32-Pro, K32-Max, PocketScroller v3, PocketScroller-16 | 3 (one vertical, plus a stacked pair) |
+| K16, K32 | 1 |
+
+Each port has its own current-limited power switch, about **0.5 A**. That's plenty
+for Wi-Fi adapters, sound cards and USB flash drives. Use a powered hub for anything
+hungrier, such as a USB hard drive.
+
+!!! warning "K16 and K32: use the included USB extension cable"
+    The K16's and K32's single USB-A port needs the **USB extension cable that comes with the
+    board**. Plug the cable into the port, then plug your Wi-Fi adapter or other device into the
+    cable, not straight into the port. Keep the cable with the controller.
+
+## Real-time clock (RTC)
+
+Every board has a battery-backed **real-time clock** (NXP PCF85263), so schedules
+start at the right time even with no internet for NTP.
+
+- Every board takes a **CR1220** 3 V coin cell. On the K8 boards the holder is on the **underside**
+  of the board.
+- FPP sets the RTC up automatically from the cape. The *RTC* setting is hidden because
+  there is nothing to choose.
+- Set the time zone and NTP in FPP under
+  [Settings → Time](https://manual.falconplayer.com/020-fpp-settings/#localization).
+
+
+## Temperature
+
+A **TMP1075** sensor on the board reports the board temperature. FPP shows it with the
+other sensors. Boards with a fan header use it to run the fan
+(see [Expansion header & fan](expansion.md#fan)).

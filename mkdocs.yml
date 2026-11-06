@@ -1,0 +1,108 @@
+site_name: Kulp Lights Controller Manual
+site_description: Hardware manual for Kulp Lights PocketBeagle2 pixel controllers running FPP
+site_author: Kulp Lights
+site_url: https://kulplights.com/manuals/
+copyright: Copyright &copy; 2026 Kulp Lights
+repo_url: https://github.com/KulpLights/kulp-manuals
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  logo: assets/kulp-icon.svg
+  favicon: assets/kulp-icon.svg
+
+extra_css:
+  - assets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path: [docs/_snippets]
+      check_paths: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys
+
+plugins:
+  - search
+  - print-site:
+      add_to_navigation: true
+      print_page_title: "Print / PDF"
+      add_cover_page: true
+      add_table_of_contents: true
+      enumerate_headings: false
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Safety: getting-started/safety.md
+      - Which board do I have?: getting-started/which-board.md
+      - Quick start: getting-started/quick-start.md
+  - Hardware:
+      - PocketBeagle 2: hardware/pocketbeagle2.md
+      - Power: hardware/power.md
+      - Pixel outputs: hardware/pixel-outputs.md
+      - Differential ports: hardware/differential.md
+      - DMX / serial: hardware/dmx.md
+      - Controls & display: hardware/controls.md
+      - Audio: hardware/audio.md
+      - Network, USB & clock: hardware/network-usb-rtc.md
+      - Expansion header & fan: hardware/expansion.md
+  - Boards:
+      - boards/index.md
+      - K8-Pro: boards/k8-pro.md
+      - K8-Max: boards/k8-max.md
+      - K16: boards/k16.md
+      - K16-Pro: boards/k16-pro.md
+      - K16-Max: boards/k16-max.md
+      - K32: boards/k32.md
+      - K32-Pro: boards/k32-pro.md
+      - K32-Max: boards/k32-max.md
+      - PocketScroller v3: boards/pocketscroller-v3.md
+      - PocketScroller-16: boards/pocketscroller-16.md
+  - Software (FPP):
+      - First boot: software/first-boot.md
+      - Configuring outputs: software/outputs.md
+      - Current monitoring & eFuses: software/current-monitoring.md
+      - Updating: software/updating.md
+  - Troubleshooting: troubleshooting.md
+  - Support: support.md
