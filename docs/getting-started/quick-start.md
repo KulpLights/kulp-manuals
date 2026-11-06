@@ -5,21 +5,23 @@ you know which step it was.
 
 ## What you need
 
-- [ ] The controller, with a **PocketBeagle 2** fitted (see [PocketBeagle 2](../hardware/pocketbeagle2.md))
+- [ ] The controller, with a **PocketBeagle 2** or **BeagleBone Black** fitted (see
+      [PocketBeagle 2](../hardware/pocketbeagle2.md) or [BeagleBone Black](../hardware/beaglebone-black.md))
 - [ ] A **microSD card with FPP**, unless you have a PB2 Industrial with FPP on eMMC
-- [ ] A **5–24 V DC LED power supply** matched to your pixels (**5 V only** for the PocketScrollers)
+- [ ] A **5–24 V DC LED power supply** matched to your pixels (**5 V only** for the PocketScrollers,
+      K40D-PB, K64D-B, K128D-B and OctoPlus; 18 V at most for the K8-PB, K4-PB, K8-B and K8-B-Scroller)
 - [ ] An **Ethernet cable** to your router or show switch. The K8-PB, K4-PB, K40D-PB and PocketScroller v2
       have no Ethernet jack, so they also need a **USB Ethernet adapter** (or a USB Wi-Fi adapter).
-- [ ] Pixels with a pigtail wired to a 3-pin plug (or LED panels for the PocketScroller)
+- [ ] Pixels with a pigtail wired to a 3-pin plug (or LED panels for the PocketScrollers and OctoPlus)
 - [ ] A small flat screwdriver
 
 ## 1. Bench test with one string
 
-On the **K40D-PB**, which has no pixel ports, wire the string to a differential receiver on the
-`1-4` jack instead, and power the K40D-PB from a 5 V supply.
+On the **K40D-PB**, **K64D-B** and **K128D-B**, which have no pixel ports, wire the string to a
+differential receiver on the `1-4` jack instead, and power the board from a 5 V supply.
 
 1. [ ] Read [Safety](safety.md).
-2. [ ] Insert the SD card into the PocketBeagle 2, unless you are using eMMC.
+2. [ ] Insert the SD card into the PocketBeagle 2 or BeagleBone, unless you are using eMMC.
 3. [ ] Wire **one** pixel string to **P1**: ground in **G**, data in **D**, +V in **V**. Check
        the pixel voltage matches your supply.
 4. [ ] Check the supply before connecting it: set its **115V/230V** input switch (if it has one) to
@@ -28,12 +30,13 @@ On the **K40D-PB**, which has no pixel ports, wire the string to a differential 
 5. [ ] Wire the supply to the **terminal that powers the controller**. That's the terminal
        for ports 1–4 on the K16 and K32, and the **right-hand** terminal on the K8 boards. On
        the K8 boards, P1 is fed from the left terminal, so for this test wire both K8 terminals,
-       or use P5 instead. The K8-PB and K4-PB have a single terminal for everything.
+       or use P5 instead. The K8-PB, K4-PB, K8-B and K8-B-Scroller have a single terminal for
+       everything.
        See [Power](../hardware/power.md#banks).
 6. [ ] Plug in the Ethernet cable (on the K8-PB, K4-PB, K40D-PB or PocketScroller v2, through the USB Ethernet adapter).
 7. [ ] Plug the supply into the mains.
 
-**Check:** the blue power LEDs light, and within a minute or two the OLED shows the FPP logo and then
+**Check:** the power LEDs light (on the K8-B and K8-B-Scroller, the green LED above each fuse), and within a minute or two the OLED shows the FPP logo and then
 the status page with an **IP address**. The first boot of a new SD card can take a few minutes longer.
 
 ## 2. Connect to FPP

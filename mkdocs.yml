@@ -79,6 +79,7 @@ nav:
       - Quick start: getting-started/quick-start.md
   - Hardware:
       - PocketBeagle 2: hardware/pocketbeagle2.md
+      - BeagleBone Black: hardware/beaglebone-black.md
       - Power: hardware/power.md
       - Pixel outputs: hardware/pixel-outputs.md
       - Differential ports: hardware/differential.md
@@ -89,20 +90,27 @@ nav:
       - Expansion header & fan: hardware/expansion.md
   - Boards:
       - boards/index.md
-      - K8-Pro: boards/k8-pro.md
-      - K8-Max: boards/k8-max.md
-      - K8-PB: boards/k8-pb.md
-      - K4-PB: boards/k4-pb.md
-      - K40D-PB: boards/k40d-pb.md
-      - K16: boards/k16.md
-      - K16-Pro: boards/k16-pro.md
-      - K16-Max: boards/k16-max.md
-      - K32: boards/k32.md
-      - K32-Pro: boards/k32-pro.md
-      - K32-Max: boards/k32-max.md
-      - PocketScroller v2: boards/pocketscroller-v2.md
-      - PocketScroller v3: boards/pocketscroller-v3.md
-      - PocketScroller-16: boards/pocketscroller-16.md
+      - PocketBeagle 2:
+          - K8-Pro: boards/k8-pro.md
+          - K8-Max: boards/k8-max.md
+          - K8-PB: boards/k8-pb.md
+          - K4-PB: boards/k4-pb.md
+          - K40D-PB: boards/k40d-pb.md
+          - K16: boards/k16.md
+          - K16-Pro: boards/k16-pro.md
+          - K16-Max: boards/k16-max.md
+          - K32: boards/k32.md
+          - K32-Pro: boards/k32-pro.md
+          - K32-Max: boards/k32-max.md
+          - PocketScroller v2: boards/pocketscroller-v2.md
+          - PocketScroller v3: boards/pocketscroller-v3.md
+          - PocketScroller-16: boards/pocketscroller-16.md
+      - BeagleBone Black:
+          - K8-B: boards/k8-b.md
+          - K8-B-Scroller: boards/k8-b-scroller.md
+          - K64D-B: boards/k64d-b.md
+          - K128D-B: boards/k128d-b.md
+          - OctoPlus: boards/octoplus.md
   - Software (FPP):
       - First boot: software/first-boot.md
       - Configuring outputs: software/outputs.md

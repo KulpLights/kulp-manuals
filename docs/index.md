@@ -9,7 +9,9 @@ hide:
 
 # Kulp Lights Controller Manual
 
-This manual covers the **hardware** of the Kulp Lights PocketBeagle 2 controllers:
+This manual covers the **hardware** of the Kulp Lights controllers.
+
+## PocketBeagle 2 controllers
 
 <div class="grid cards" markdown>
 
@@ -55,7 +57,37 @@ This manual covers the **hardware** of the Kulp Lights PocketBeagle 2 controller
 
 </div>
 
-Every one of these boards is a *cape* for the **PocketBeagle 2** and runs
+## BeagleBone Black controllers
+
+<div class="grid cards" markdown>
+
+-   **K8-B · K8-B-Scroller**
+
+    ---
+
+    8 fused pixel ports + differential ports; the K8-B-Scroller adds 3 HUB75 panel outputs.
+
+    [:octicons-arrow-right-24: K8-B](boards/k8-b.md) · [K8-B-Scroller](boards/k8-b-scroller.md)
+
+-   **K64D-B · K128D-B**
+
+    ---
+
+    64 or 128 strings on 16 or 32 differential ports, with audio and two DMX/LOR outputs.
+
+    [:octicons-arrow-right-24: K64D-B](boards/k64d-b.md) · [K128D-B](boards/k128d-b.md)
+
+-   **OctoPlus**
+
+    ---
+
+    8 HUB75 outputs for LED panel matrices.
+
+    [:octicons-arrow-right-24: OctoPlus](boards/octoplus.md)
+
+</div>
+
+Every one of these boards is a *cape* for a **PocketBeagle 2** or a **BeagleBone Black** and runs
 **FPP (Falcon Player)**. FPP is the software that plays your show, and it has its own
 manual at **[manual.falconplayer.com](https://manual.falconplayer.com)**. This manual
 doesn't repeat that one. It covers what the FPP manual can't:

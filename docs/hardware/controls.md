@@ -3,7 +3,9 @@
 Every board has a small **OLED display** and five buttons: **Up**, **Down**, **Enter**,
 **Back** and **Test**. The K8-PB and K40D-PB have four: **Down** and **Test** share one button,
 marked *Down Test* (*Down/Test* on the K40D-PB). On the status page it works as **Test**; in menus it works as **Down**. The
-K4-PB and PocketScroller v2 have two buttons, **Down** (which is also Test, as on the K8-PB) and **Enter**. From them you can check status, read the IP address, change modes
+K4-PB, PocketScroller v2 and OctoPlus have two buttons, **Down** (which is also Test, as on the K8-PB) and **Enter**.
+The BeagleBone Black boards also have a **Power** button (and the K64D-B and K128D-B a **Boot** button)
+for the BeagleBone; see [BeagleBone Black](beaglebone-black.md#power-button). From them you can check status, read the IP address, change modes
 and run test patterns without a computer.
 
 ## The OLED
@@ -34,7 +36,7 @@ what is playing. When the board has sensors, press **Enter** to step through:
 | **FPP Mode** | Switch between *Player* and *Remote* mode |
 | **Tethering** | Turn FPP's Wi-Fi hotspot to *Automatic*, *On* or *Off* (needs a USB Wi-Fi adapter) |
 | **Testing** | Pick a test pattern (white, red, green, blue, cycles, chases) and optionally run it across MultiSync |
-| **Reboot** / **Shutdown** | Restart or shut down the PocketBeagle cleanly |
+| **Reboot** / **Shutdown** | Restart or shut down the PocketBeagle or BeagleBone cleanly |
 | **Reset** | Factory-reset all FPP settings, or just a part of them (network, outputs, playlists…) |
 | **About** | FPP version, cape and serial number |
 | **Back** | Return to the status page |
@@ -61,8 +63,8 @@ ports (Pro/Max), FPP powers the ports for the test.
 
 !!! note
     The test uses the pixel counts set in FPP's *Pixel Strings* page. A fresh board is set
-    to 50 pixels per local port, so on a longer string only the first 50 light up until
-    you set the real count.
+    to 50 pixels per local port (100 on the BeagleBone Black boards), so on a longer string
+    only the first ones light up until you set the real count.
 
 ## Status LEDs
 
@@ -74,6 +76,8 @@ ports (Pro/Max), FPP powers the ports for the test.
 | Ethernet jack | left / right | Link (left) and activity (right). See [Network](network-usb-rtc.md). |
 | On the PocketBeagle 2 | various | Boot and activity (see [PocketBeagle 2](pocketbeagle2.md)) |
 
-The PocketScrollers have no power LEDs; check the OLED and the Ethernet LEDs instead. The K8-PB
+The PocketScrollers and the OctoPlus have no power LEDs; check the OLED and the Ethernet LEDs
+instead. On the K8-B and K8-B-Scroller the green LED above each fuse lights when the fuse is good,
+and the K64D-B and K128D-B have one power LED beside their power terminal. The K8-PB
 has no Ethernet jack; its two blue LEDs are on the right-hand edge (see its
 [board page](../boards/k8-pb.md#power-terminal)).

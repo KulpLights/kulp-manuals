@@ -2,7 +2,7 @@
 
 ## Ethernet
 
-Every board except the K8-PB, K4-PB, K40D-PB and PocketScroller v2 has one **Gigabit Ethernet** jack, the RJ45 with built-in LEDs. It connects
+Every PocketBeagle 2 board except the K8-PB, K4-PB, K40D-PB and PocketScroller v2 has one **Gigabit Ethernet** jack, the RJ45 with built-in LEDs. It connects
 to the PocketBeagle 2 over USB 2.0, so real throughput is roughly **300 Mb/s**. That is
 far more than a show needs, even with hundreds of E1.31 universes.
 
@@ -10,6 +10,9 @@ far more than a show needs, even with hundreds of E1.31 universes.
 - Out of the box FPP uses **DHCP**. The IP address appears on the OLED.
 - **K8-PB, K4-PB, K40D-PB and PocketScroller v2:** there's no Ethernet jack. Plug a **USB Ethernet adapter** (or a USB Wi-Fi adapter)
   into its USB-A port.
+- **BeagleBone Black boards** (K8-B, K8-B-Scroller, K64D-B, K128D-B, OctoPlus) use the
+  BeagleBone's own **10/100 Ethernet** jack, which is plenty for a show. A BeagleBone Black
+  Wireless uses Wi-Fi instead. See [BeagleBone Black](beaglebone-black.md#network-and-usb).
 - For networking topics (static IPs, show networks, reaching receivers or controllers
   behind FPP), see the FPP manual:
   [Network](https://manual.falconplayer.com/016-network/) ·
@@ -32,7 +35,8 @@ If the link LED stays off, check the cable and the switch port before anything e
 
 ## Wi-Fi
 
-The PocketBeagle 2 has no built-in Wi-Fi. Plug an FPP-supported **USB Wi-Fi adapter**
+The PocketBeagle 2 and the BeagleBone Black have no built-in Wi-Fi (the BeagleBone Black
+Wireless does). Plug an FPP-supported **USB Wi-Fi adapter**
 into a USB-A port to get:
 
 - Wi-Fi as a second network
@@ -59,14 +63,19 @@ connected while the cape has its own power.
     PocketScroller v2 fitted with an original PocketBeagle 1**. It can permanently damage the board.
     Use a USB network adapter instead. A K4-PB or PocketScroller v2 with a PocketBeagle 2 is fine.
 
+!!! danger "BeagleBone Black boards: not while the cape is powered"
+    On the BeagleBone Black boards, never connect the BeagleBone's USB port to a computer while
+    the cape is powered. See [BeagleBone Black](beaglebone-black.md#powering).
+
 ## USB ports
 
 | Board | USB-A host ports |
 |---|---|
 | K8-Pro, K8-Max, K16-Pro, K16-Max, K32-Pro, K32-Max, PocketScroller v3, PocketScroller-16 | 3 (one vertical, plus a stacked pair) |
 | K16, K32, K8-PB, K4-PB, K40D-PB, PocketScroller v2 | 1 |
+| K8-B, K8-B-Scroller, K64D-B, K128D-B, OctoPlus | 1, on the BeagleBone |
 
-Each port has its own current-limited power switch, about **0.5 A**. That's plenty
+On the PocketBeagle 2 boards each port has its own current-limited power switch, about **0.5 A**. That's plenty
 for Wi-Fi adapters, sound cards and USB flash drives. Use a powered hub for anything
 hungrier, such as a USB hard drive.
 
@@ -78,11 +87,12 @@ hungrier, such as a USB hard drive.
 ## Real-time clock (RTC)
 
 Every board except the K4-PB and PocketScroller v2 has a battery-backed **real-time clock** (NXP PCF85263,
-or PCF85363 on the K8-PB), so schedules start at the right time even with no internet for NTP.
+PCF85363 or PCF8523, depending on the board), so schedules start at the right time even with no internet for NTP.
 The K4-PB and PocketScroller v2 have no clock, so set up NTP on them.
 
 - Every board takes a **CR1220** 3 V coin cell. On the K8 boards the holder is on the **underside**
-  of the board.
+  of the board. On the K64D-B, K128D-B and OctoPlus it is **under the OLED**: unplug the OLED to
+  reach it.
 - FPP sets the RTC up automatically from the cape. The *RTC* setting is hidden because
   there is nothing to choose.
 - Set the time zone and NTP in FPP under
@@ -91,6 +101,7 @@ The K4-PB and PocketScroller v2 have no clock, so set up NTP on them.
 
 ## Temperature
 
-A **TMP1075** sensor on the board (an analog sensor on the K4-PB and PocketScroller v2) reports the board temperature. FPP shows it with the
+A temperature sensor on the board (a **TMP1075** on most PocketBeagle 2 boards) reports the board
+temperature. Some boards, such as the K8-B, K64D-B and K128D-B, have a second one (`Temp2`). FPP shows it with the
 other sensors. Boards with a fan header use it to run the fan
 (see [Expansion header & fan](expansion.md#fan)).

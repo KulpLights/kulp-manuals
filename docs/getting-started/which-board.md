@@ -22,6 +22,11 @@ To tell them apart at a glance:
 | **6** ribbon-cable (HUB75) headers along the bottom edge, no Ethernet jack | [PocketScroller v2](../boards/pocketscroller-v2.md) |
 | **8** ribbon-cable (HUB75) headers marked *Output 1–8* | [PocketScroller v3](../boards/pocketscroller-v3.md) |
 | **16** ribbon-cable (HUB75) headers in two rows, *Output 1–16* | [PocketScroller-16](../boards/pocketscroller-16.md) |
+| **8** green pixel plugs with fuses, **3** RJ45s on the left edge, a 40-pin header along the top, a BeagleBone underneath | [K8-B](../boards/k8-b.md) |
+| **8** green pixel plugs with fuses, **1** RJ45 and **3** ribbon-cable (HUB75) headers marked *Panel 1–3* | [K8-B-Scroller](../boards/k8-b-scroller.md) |
+| **16** RJ45 jacks in a 4 × 4 grid, a BeagleBone upside down on top | [K64D-B](../boards/k64d-b.md) |
+| **32** RJ45 jacks in 8 rows of 4, a BeagleBone upside down on top | [K128D-B](../boards/k128d-b.md) |
+| **8** ribbon-cable (HUB75) headers in two rows of four, on a cape the size of a BeagleBone | [OctoPlus](../boards/octoplus.md) |
 
 <div class="grid cards" markdown>
 
@@ -81,13 +86,33 @@ To tell them apart at a glance:
 
     **PocketScroller-16**
 
+-   ![K8-B](../assets/boards/K8-B-photo.webp){ loading=lazy }
+
+    **K8-B**
+
+-   ![K8-B-Scroller](../assets/boards/K8-B-Scroller-photo.webp){ loading=lazy }
+
+    **K8-B-Scroller**
+
+-   ![K64D-B](../assets/boards/K64D-B-photo.webp){ loading=lazy }
+
+    **K64D-B**
+
+-   ![K128D-B](../assets/boards/K128D-B-photo.webp){ loading=lazy }
+
+    **K128D-B**
+
+-   ![OctoPlus](../assets/boards/OctoPlus-photo.webp){ loading=lazy }
+
+    **OctoPlus**
+
 </div>
 
 For a feature-by-feature comparison, see [Boards](../boards/index.md).
 
 !!! note "Older Kulp boards"
-    This manual covers the **PocketBeagle 2** boards. Older BeagleBone Black and PocketBeagle 1
-    boards have their own manuals:
+    This manual covers the **PocketBeagle 2** boards and the BeagleBone Black boards Kulp Lights
+    sells now. Some older BeagleBone Black and PocketBeagle 1 boards have their own manuals:
 
     - [K16A-B](https://kulplights.com/manuals/K16A-B-Manual.pdf)
     - [F8-B](https://kulplights.com/manuals/F8-B-Manual.pdf)

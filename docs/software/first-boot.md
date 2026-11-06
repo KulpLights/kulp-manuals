@@ -6,6 +6,8 @@ FPP's own manual covers setup in detail. This page lists what's specific to thes
    Wi-Fi adapter and FPP's hotspot (see below), or a USB cable to the PocketBeagle 2's USB-C port
    ([USB tethering](../hardware/network-usb-rtc.md#usb-tethering)). The K8-PB, K4-PB,
    K40D-PB and PocketScroller v2 have no Ethernet jack: use a USB Ethernet adapter, or a USB Wi-Fi adapter.
+   The BeagleBone Black boards use the BeagleBone's Ethernet jack; don't use USB tethering on them
+   while the cape is powered.
 2. **Power up.** The OLED shows the IP address once the network is up.
 3. **Browse to the IP address** (or `http://fpp.local`) and follow FPP's
    [initial configuration](https://manual.falconplayer.com/006-quickstart/#initial-configuration).

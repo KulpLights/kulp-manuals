@@ -3,7 +3,9 @@
 All of the boards use the same building blocks, so each board page is short and links
 to the shared [Hardware](../hardware/power.md) chapters for details.
 
-## Pixel controllers
+## PocketBeagle 2 boards
+
+### Pixel controllers
 
 | | K8-Pro | K8-Max | K16 | K16-Pro | K16-Max | K32 | K32-Pro | K32-Max |
 |---|---|---|---|---|---|---|---|---|
@@ -25,7 +27,7 @@ to the shared [Hardware](../hardware/power.md) chapters for details.
 <small>Fuse = 5 A mini-blade per port. eFuse = electronic fuse, about 6 A per port, switchable and
 monitored. †Bank switching on the K16-Pro and K32-Pro starts at board revision v4.1.</small>
 
-### Which model line?
+#### Which model line?
 
 - **Base (K16, K32):** the most outputs for the money. Fused ports and send-only differential.
 - **Pro:** adds two-way differential for Falcon V5 receivers, audio, a second DMX output, three
@@ -33,7 +35,7 @@ monitored. †Bank switching on the K16-Pro and K32-Pro starts at board revision
 - **Max:** everything in Pro, plus an **eFuse on every port**. FPP can switch each port and read
   its current, and a short is cut in microseconds and reported in FPP instead of blowing a fuse.
 
-## Compact controllers: K8-PB, K4-PB and K40D-PB
+### Compact controllers: K8-PB, K4-PB and K40D-PB
 
 | | K8-PB | K4-PB | K40D-PB |
 |---|---|---|---|
@@ -52,7 +54,7 @@ no Falcon V5 support. The K8-PB's expansion port drives 16 strings through a Fal
 expansion board, and the K4-PB fits a small TA-200 enclosure. See the [K8-PB](k8-pb.md),
 [K4-PB](k4-pb.md) and [K40D-PB](k40d-pb.md) pages.
 
-## LED panels
+### LED panels
 
 | | PocketScroller v2 | PocketScroller v3 | PocketScroller-16 |
 |---|---|---|---|
@@ -65,7 +67,27 @@ expansion board, and the K4-PB fits a small TA-200 enclosure. See the [K8-PB](k8
 | Size (mm) | 61 × 73 | 122 × 101 | 122 × 144 |
 | Minimum FPP | 9.5 on PB2 (10+ recommended) | 9.0 | 10.0 |
 
+## BeagleBone Black boards
+
+| | K8-B | K8-B-Scroller | K64D-B | K128D-B | OctoPlus |
+|---|---|---|---|---|---|
+| Local pixel ports | 8, fused | 8, fused | — | — | — |
+| Differential ports (strings) | 3 (12) | 1 (4) | **16 (64)** | **32 (128)** | — |
+| Expansion port | 16 strings | — | — | — | — |
+| HUB75 panel outputs | — | 3 | — | — | **8** |
+| **Total strings** | **36** | **12** | **64** | **128** | — |
+| Power input | **5–18 V** | **5–18 V** | **5 V** only | **5 V** only | **5 V** only |
+| DMX / serial | 2 (header) | 2 (header) | 2 (RJ45, DMX/LOR) | 2 (RJ45, DMX/LOR) | — |
+| Built-in audio + FM socket | — | — | ✔ | ✔ | — |
+| Real-time clock | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Size (mm) | 86 × 109 | 86 × 109 | 182 × 160 | 182 × 225 | 55 × 99 |
+
+All five are capes for the **BeagleBone Black**, which provides the Ethernet and USB port. Their
+differential ports are send-only: smart receivers work in v1, v2 or V4 mode. See
+[BeagleBone Black](../hardware/beaglebone-black.md).
+
 ## All boards
 
-All of them need a **PocketBeagle 2** and run **FPP**. The K4-PB, K40D-PB and PocketScroller v2 also
-work with the original PocketBeagle 1. See [PocketBeagle 2](../hardware/pocketbeagle2.md).
+All of them run **FPP**. The boards above the BeagleBone Black section need a **PocketBeagle 2**;
+the K4-PB, K40D-PB and PocketScroller v2 also work with the original PocketBeagle 1. See
+[PocketBeagle 2](../hardware/pocketbeagle2.md) and [BeagleBone Black](../hardware/beaglebone-black.md).

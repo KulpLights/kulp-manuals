@@ -11,10 +11,11 @@ Before you write, check [Troubleshooting](troubleshooting.md). It also lists
 
 | Part | Used on |
 |---|---|
-| 5 A mini-blade fuses (10-pack) | K16, K32, Pro boards |
+| 5 A mini-blade fuses (10-pack) | K16, K32, Pro boards, K8-B, K8-B-Scroller |
 | [Pixel connectors](https://kulplights.com/product/pixel-connectors/) (3.5 mm Phoenix-style plugs, screw or spring) | all K-series boards (one per port is included) |
 | Smart Receiver SRx1, long-range SRx2 / SRx4 | differential ports |
-| PocketBeagle 2 / PocketBeagle 2 Industrial | all boards |
+| PocketBeagle 2 / PocketBeagle 2 Industrial | PocketBeagle 2 boards |
+| BeagleBone Black / BeagleBone Green | BeagleBone Black boards |
 | SD card with FPP | all boards |
 | microSD extender, USB extension cable | all boards |
 | [Si4713 FM transmitter](https://kulplights.com/product/fm-transmitter-si4713/) | boards with built-in audio (plugs into the FM socket) |

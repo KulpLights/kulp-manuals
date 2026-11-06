@@ -12,7 +12,7 @@ so a bank must be wired to a supply that matches the pixels on all four of its p
 - The [differential ports](differential.md) carry **data only**. Strings on differential
   receivers are powered at the receiver.
 
-The terminals are marked on the board **V+ 5-24V** and **G/V−** (**V+ 5-18V** and **G** on the K8-PB, **V+** and **GND** on the K4-PB). Each board page shows
+The terminals are marked on the board **V+ 5-24V** and **G/V−** (**V+ 5-18V** and **G** on the K8-PB, **V+** and **GND** on the K4-PB, K8-B and K8-B-Scroller). Each board page shows
 which terminal feeds which ports.
 
 | Board | Power terminals | Bank size | Terminal that also powers the controller |
@@ -24,15 +24,17 @@ which terminal feeds which ports.
 | K16, K16-Pro, K16-Max | 4 | 4 ports | **V1**, upper left (ports 1–4) |
 | K32, K32-Pro, K32-Max | 8 | 4 ports | **V1**, top left (ports 1–4) |
 | PocketScroller v2, v3 and -16 | 1 (5 V only) | — | the only terminal |
+| K8-B, K8-B-Scroller | 1 (5–18 V) | all 8 ports | the only terminal |
+| K64D-B, K128D-B, OctoPlus | 1 (5 V only) | — | the only terminal |
 
 !!! important "One terminal also runs the controller"
-    The PocketBeagle 2, network, USB, OLED and all of the controller's logic run from
-    **one** specific power terminal (the last column above). If that terminal has no
+    The PocketBeagle 2 or BeagleBone, network, USB, OLED and all of the controller's logic
+    run from **one** specific power terminal (the last column above). If that terminal has no
     power, the controller won't boot, even with every other bank powered. The other
     terminals power only their own pixel ports.
 
-    A blue LED next to that terminal lights when it has power. A second blue LED shows
-    that the controller's internal 5 V supply is running.
+    On the PocketBeagle 2 pixel controllers, a blue LED next to that terminal lights when it
+    has power, and a second blue LED shows that the controller's internal 5 V supply is running.
 
 ## Voltage
 
@@ -45,6 +47,11 @@ which terminal feeds which ports.
 - **K40D-PB:** **5 V DC only**, for the controller alone, from a supply rated 4–5 A. Its strings
   are powered at the receivers.
 - **PocketScroller v2, v3 and -16:** **5 V DC only.** See their board pages.
+- **K8-B and K8-B-Scroller:** one terminal, **5 V to 18 V DC**, for the controller and all the
+  ports. **No 24 V.**
+- **K64D-B, K128D-B and OctoPlus:** **5 V DC only**, for the controller alone (3 A or more for the
+  K64D-B, 4 A or more for the K128D-B). Their strings are powered at the receivers, and the
+  OctoPlus's panels from their own supply.
 - A 5 V supply on the logic terminal is fine. The controller's internal 5 V regulator
   passes it straight through (about 4.96 V out from 5.0 V in), so 5 V-only setups need no
   separate supply.
@@ -55,8 +62,10 @@ On the K8, K16 and K32 boards each power input has an *ideal diode* in series. I
 wired backwards, that bank simply stays off; nothing on the controller is damaged. Fix the
 wiring and the bank will come up.
 
-The **K8-PB and K4-PB are not protected** this way: a reversed supply can damage it. Check the polarity
-before you power up. Pixels have no such protection; see [Safety](../getting-started/safety.md).
+The **K8-PB and K4-PB are not protected** this way: a reversed supply can damage them. On the
+**K8-B and K8-B-Scroller** the BeagleBone and the logic are protected, but a reversed supply goes
+straight through the fuses to the pixel ports. The **K64D-B** isn't protected either. Check the
+polarity before you power up. Pixels have no such protection; see [Safety](../getting-started/safety.md).
 
 ### Voltage readings in FPP
 
@@ -125,8 +134,9 @@ model:
 | **K8-Pro, K16-Pro, K32-Pro** | 5 A mini-blade fuse | yes, **per bank of 4**[^banks] | only from Falcon V5 receivers |
 | **K8-Max, K16-Max, K32-Max** | **eFuse, about 6 A** | yes, **per port** | **yes, every port** |
 | **K8-PB, K4-PB** | **eFuse, about 5.2 A** | yes, **per port** | **yes, every port** |
+| **K8-B, K8-B-Scroller** | 5 A mini-blade fuse | no | no |
 
-### Mini-blade fuses (K16, K32 and the Pro boards)
+### Mini-blade fuses (K16, K32, the Pro boards, K8-B and K8-B-Scroller) { #mini-blade-fuses-k16-k32-and-the-pro-boards }
 
 - Each port has an automotive **mini-blade** fuse (ATM/APM style). **All of them are 5 A**, on every board. Spares are
   sold as a [10-pack](https://kulplights.com/product-category/accessories/) and at any
@@ -138,7 +148,7 @@ model:
   pigtail, a pinched wire, water in a connector) before you replace it.
 
 
-### eFuses (Max boards, K8-PB and K4-PB)
+### eFuses (Max boards, K8-PB and K4-PB) { #efuses-max-boards }
 
 The Max boards, the K8-PB and the K4-PB replace each port's fuse with an **eFuse**, an electronic fuse
 that FPP can switch on and off and read back.

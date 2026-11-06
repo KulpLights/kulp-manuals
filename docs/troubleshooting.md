@@ -8,7 +8,7 @@ goes further.
 
 | Check | Why |
 |---|---|
-| Is the **logic power terminal** powered? | Only one terminal runs the controller: V1 on K16/K32, the **right-hand** terminal on K8. See [Power](hardware/power.md#banks). |
+| Is the **logic power terminal** powered? | Only one terminal runs the controller: V1 on K16/K32, the **right-hand** terminal on K8. The other boards have one terminal. See [Power](hardware/power.md#banks). |
 | Is the blue LED beside that terminal lit? | If not, there's no voltage at the terminal. Check the supply, the wiring and the polarity. |
 | Is the polarity right? | Reversed power is blocked, not damaging, but the board stays off. Swap the wires. |
 | Is the second blue LED (5 V) lit? | If the terminal LED is on but this one is off, contact support. |
@@ -20,7 +20,13 @@ goes further.
 - Re-seat the **SD card**, and try another card or a freshly written image. A worn-out SD card is the
   most common cause.
 - Check the **PocketBeagle 2** is seated fully and the right way round
-  ([PocketBeagle 2](hardware/pocketbeagle2.md#fitting-the-pocketbeagle-2)).
+  ([PocketBeagle 2](hardware/pocketbeagle2.md#fitting-the-pocketbeagle-2)), or that the
+  **BeagleBone** is fully on its headers ([BeagleBone Black](hardware/beaglebone-black.md#fitting-the-beaglebone)).
+- **BeagleBone Black boards:** an older BeagleBone (before about 2019) boots its own eMMC instead
+  of the SD card. Hold its **Boot** button while you power up; see
+  [Booting from the SD card](hardware/beaglebone-black.md#booting-from-the-sd-card).
+- **BeagleBone Black boards:** if FPP was shut down, the BeagleBone stays off until you press the
+  cape's **Power** button or switch the supply off and on.
 - If FPP is reachable on the network but the OLED is dark, check *Settings → System → Status Display*.
 
 ## Can't find the controller on the network
@@ -37,8 +43,9 @@ goes further.
 If *Pixel Strings* shows no board, or *Cape Info* is empty:
 
 - Update FPP to the latest release. Older FPP versions don't know the newest boards.
-- Re-seat the PocketBeagle 2. The board ID is read over the header pins.
-- Make sure it is a **PocketBeagle 2**, not a PocketBeagle 1.
+- Re-seat the PocketBeagle 2 or BeagleBone. The board ID is read over the header pins.
+- Make sure the PocketBeagle 2 boards have a **PocketBeagle 2**, not a PocketBeagle 1, and the
+  BeagleBone boards a [compatible BeagleBone](hardware/beaglebone-black.md#which-beaglebones-work).
 
 ## No pixels light
 
