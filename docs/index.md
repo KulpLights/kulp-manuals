@@ -109,6 +109,21 @@ This manual covers the **hardware** of the Kulp Lights controllers.
 
 </div>
 
+## Displays & add-ons
+
+<div class="grid cards" markdown>
+
+-   **BBB-OLED · Pi-OLED**
+
+    ---
+
+    A status display, buttons and a clock for a BeagleBone or Pi running FPP. The PiOLED 3.0 adds
+    high-quality audio.
+
+    [:octicons-arrow-right-24: BBB-OLED](boards/bbb-oled.md) · [Pi-OLED](boards/pi-oled.md)
+
+</div>
+
 Every one of these boards is a *cape* (or *hat*) for a **PocketBeagle 2**, a **BeagleBone Black**
 or a **Raspberry Pi** and runs **FPP (Falcon Player)**. FPP is the software that plays your show, and it has its own
 manual at **[manual.falconplayer.com](https://manual.falconplayer.com)**. This manual

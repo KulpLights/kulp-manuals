@@ -122,6 +122,12 @@ All three are hats for the **Raspberry Pi**, which provides the network and USB 
 their pixel ports with its DPIPixels output: up to 1600 pixels per string, with smart receivers in
 v1 or v2 mode. See [Raspberry Pi](../hardware/raspberry-pi.md).
 
+## Displays & add-ons
+
+The [BBB-OLED](bbb-oled.md) and [Pi-OLED](pi-oled.md) add a status display, menu buttons, a
+real-time clock and a temperature sensor to a BeagleBone Black or Raspberry Pi running FPP, with no
+outputs of their own. The PiOLED 3.0 also adds a high-quality line-level audio output.
+
 ## All boards
 
 All of them run **FPP**. The boards in the PocketBeagle 2 section need a **PocketBeagle 2**;

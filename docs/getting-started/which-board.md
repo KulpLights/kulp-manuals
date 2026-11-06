@@ -29,6 +29,8 @@ To tell them apart at a glance:
 | **8** ribbon-cable (HUB75) headers in two rows of four, on a cape the size of a BeagleBone | [OctoPlus](../boards/octoplus.md) |
 | **16** pixel plugs, **4** RJ45s in a 2 × 2 block, `ttyS1`/`ttyS2` on the left edge, a BeagleBone underneath | [K16A-B](../boards/k16a-b.md) (retired) |
 | **32** pixel plugs with fuses along the top and bottom edges, **4** RJ45s in a 2 × 2 block, a BeagleBone underneath | [K32A-B](../boards/k32a-b.md) (retired) |
+| An OLED and **4** buttons on a small board plugged onto one BeagleBone header, no outputs | [BBB-OLED](../boards/bbb-oled.md) |
+| An OLED and **4** buttons on a Raspberry Pi, no outputs (the full-size one has a 3.5 mm jack) | [Pi-OLED](../boards/pi-oled.md) |
 | **8** green pixel plugs, no fuses, **3** RJ45s along the top, a Raspberry Pi underneath | [K8-Pi](../boards/k8-pi.md) |
 | **2** pixel plugs and **16** three-pin servo headers, on a Raspberry Pi | [K2-Pi-Servo](../boards/k2-pi-servo.md) |
 | **2** pixel plugs on a small (65 × 30 mm) board, on a Raspberry Pi Zero | [K2-Pi0](../boards/k2-pi0.md) |
@@ -118,6 +120,18 @@ To tell them apart at a glance:
 -   ![K32A-B](../assets/boards/K32A-B-photo.webp){ loading=lazy }
 
     **K32A-B** (retired)
+
+-   ![BBB-OLED](../assets/boards/BBB-OLED-photo.webp){ loading=lazy }
+
+    **BBB-OLED**
+
+-   ![Pi-OLED](../assets/boards/Pi-OLED-photo.webp){ loading=lazy }
+
+    **Pi-OLED 2.0**
+
+-   ![PiOLED 3.0 With Audio](../assets/boards/PiOLED-Audio-photo.webp){ loading=lazy }
+
+    **PiOLED 3.0 With Audio**
 
 -   ![K8-Pi](../assets/boards/K8-Pi-photo.webp){ loading=lazy }
 

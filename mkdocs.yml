@@ -118,6 +118,9 @@ nav:
           - K8-Pi: boards/k8-pi.md
           - K2-Pi-Servo: boards/k2-pi-servo.md
           - K2-Pi0: boards/k2-pi0.md
+      - Displays & add-ons:
+          - BBB-OLED: boards/bbb-oled.md
+          - Pi-OLED: boards/pi-oled.md
   - Software (FPP):
       - First boot: software/first-boot.md
       - Configuring outputs: software/outputs.md
