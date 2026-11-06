@@ -1,0 +1,17 @@
+:root {
+  --md-primary-fg-color: #1b5e20;
+  --md-primary-fg-color--light: #4c8c4a;
+  --md-primary-fg-color--dark: #003300;
+  --md-accent-fg-color: #c62828;
+}
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #2e7d32;
+}
+.md-typeset img.board { border-radius: 6px; }
+.md-typeset table.compact td, .md-typeset table.compact th { padding: .35em .6em; }
+.md-typeset .spec-table td:first-child { font-weight: 600; white-space: nowrap; }
+.pinout { font-variant-numeric: tabular-nums; }
+
+/* Header logo: the tree icon needs a light backing to stand out on the green bar */
+.md-header__button.md-logo img { height: 1.9rem; background: #fff; border-radius: 6px; padding: 2px; }
+.md-typeset img.kulp-hero { display: inline-block; margin: 0 auto .5rem; }
