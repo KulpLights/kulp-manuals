@@ -27,6 +27,8 @@ which terminal feeds which ports.
 | K8-B, K8-B-Scroller | 1 (5–18 V) | all 8 ports | the only terminal |
 | K64D-B, K128D-B, OctoPlus | 1 (5 V only) | — | the only terminal |
 | K8-Pi | 1 (5–18 V) | all 8 ports | the only terminal |
+| K16A-B | 2 (v1, v2) or 4 (v3) | 8 or 4 ports | the **right-hand** terminal |
+| K32A-B | 4 | 8 ports | the **bottom-right** terminal |
 | K2-Pi0 | 1 (5–24 V) | both ports | the only terminal |
 | K2-Pi-Servo | 2: pixels (5–24 V) and servos | both pixel ports | the **top** (pixel) terminal |
 

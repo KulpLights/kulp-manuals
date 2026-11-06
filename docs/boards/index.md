@@ -86,6 +86,22 @@ All five are capes for the **BeagleBone Black**, which provides the Ethernet and
 differential ports are send-only: smart receivers work in v1, v2 or V4 mode. See
 [BeagleBone Black](../hardware/beaglebone-black.md).
 
+### Retired BeagleBone Black boards
+
+| | K16A-B | K32A-B |
+|---|---|---|
+| Local pixel ports | 16 | 32, fused |
+| Port protection | fuses (v1), eFuses (v2, v3) | 5 A fuse |
+| Differential ports (strings) | 4 (16) | 4 (16) |
+| Expansion port | 16 strings | — |
+| **Total strings** | **48** | **48** |
+| Power terminals | 2 (v1, v2) or 4 (v3) | 4 |
+| DMX / serial | 2 | 2 |
+| Built-in audio + FM socket | ✔ | ✔ |
+| Size (mm) | 150 × 114 | 150 × 150 |
+
+No longer sold, but still widely used. See the [K16A-B](k16a-b.md) and [K32A-B](k32a-b.md) pages.
+
 ## Raspberry Pi boards
 
 | | K8-Pi | K2-Pi-Servo | K2-Pi0 |

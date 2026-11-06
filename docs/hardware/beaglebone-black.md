@@ -2,7 +2,8 @@
 
 The [K8-B](../boards/k8-b.md), [K8-B-Scroller](../boards/k8-b-scroller.md),
 [K64D-B](../boards/k64d-b.md), [K128D-B](../boards/k128d-b.md) and
-[OctoPlus](../boards/octoplus.md) are **capes** for the **BeagleBone Black** (BBB). The BBB is a
+[OctoPlus](../boards/octoplus.md), and the retired [K16A-B](../boards/k16a-b.md) and
+[K32A-B](../boards/k32a-b.md), are **capes** for the **BeagleBone Black** (BBB). The BBB is a
 small computer that runs FPP, and the cape adds the power, outputs and connectors. FPP drives the
 outputs from the BBB's two PRUs, small real-time processors beside the main CPU.
 

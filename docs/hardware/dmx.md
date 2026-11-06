@@ -18,6 +18,8 @@ FPP can drive them as:
 | K8-B, K8-B-Scroller | 2, on a 2×3 header | `ttyS1`, `ttyS2` | P9-24, P9-21 |
 | K64D-B, K128D-B | 2, RJ45 with a DMX/LOR switch | `ttyS1`, `ttyS2` | P9-24, P9-21 |
 | OctoPlus | none | — | — |
+| K16A-B | 2: 3-pin terminals (v1), RJ45 (v2, v3) | `ttyS1`, `ttyS2` | P9-24, P9-21 |
+| K32A-B | 2, on 3-pin terminals | `ttyS1`, `ttyS2` | P9-24, P9-21 |
 | K8-Pi | 1, on a 3-pin header | `ttyAMA0` | Pi GPIO14 (pin 8) |
 | K2-Pi-Servo, K2-Pi0 | none | — | — |
 
