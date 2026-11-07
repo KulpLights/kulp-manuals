@@ -1,0 +1,3063 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hardware manual for Kulp Lights PocketBeagle2 pixel controllers running FPP">
+      
+      
+        <meta name="author" content="Kulp Lights">
+      
+      
+        <link rel="canonical" href="https://kulplights.com/manuals/boards/k128d-b/">
+      
+      
+        <link rel="prev" href="../k64d-b/">
+      
+      
+        <link rel="next" href="../octoplus/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/kulp-icon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>K128D-B - Kulp Lights Controller Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#k128d-b" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Kulp Lights Controller Manual" class="md-header__button md-logo" aria-label="Kulp Lights Controller Manual" data-md-component="logo">
+      
+  <img src="../../assets/kulp-icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kulp Lights Controller Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              K128D-B
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/KulpLights/kulp-manuals" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Kulp Lights Controller Manual" class="md-nav__button md-logo" aria-label="Kulp Lights Controller Manual" data-md-component="logo">
+      
+  <img src="../../assets/kulp-icon.svg" alt="logo">
+
+    </a>
+    Kulp Lights Controller Manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/KulpLights/kulp-manuals" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Safety
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/which-board/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Which board do I have?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/pocketbeagle2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PocketBeagle 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/beaglebone-black/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BeagleBone Black
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raspberry Pi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/power/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Power
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/pixel-outputs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pixel outputs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/differential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Differential ports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/dmx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DMX / serial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controls & display
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/network-usb-rtc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network, USB & clock
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/expansion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expansion header & fan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Boards
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Boards
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PocketBeagle 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PocketBeagle 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k8-pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K8-Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k8-max/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K8-Max
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k8-pb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K8-PB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k4-pb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K4-PB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k40d-pb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K40D-PB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k16-pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K16-Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k16-max/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K16-Max
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K32
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k32-pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K32-Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k32-max/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K32-Max
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pocketscroller-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PocketScroller v2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pocketscroller-v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PocketScroller v3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pocketscroller-16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PocketScroller-16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BeagleBone Black
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BeagleBone Black
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k8-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K8-B
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k8-b-scroller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K8-B-Scroller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k64d-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K64D-B
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K128D-B
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K128D-B
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#board-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board map
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Board map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differential ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixel-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pixel capacity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dmx-lor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DMX / LOR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-and-fm-transmitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio and FM transmitter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpio-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPIO header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buttons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other connectors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fpp-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FPP setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#board-revisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board revisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimensions-mounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensions &amp; mounting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../octoplus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OctoPlus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k16a-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K16A-B (retired)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k32a-b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K32A-B (retired)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raspberry Pi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Raspberry Pi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k8-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K8-Pi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k2-pi-servo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K2-Pi-Servo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k2-pi0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K2-Pi0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Displays & add-ons
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Displays & add-ons
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bbb-oled/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BBB-OLED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pi-oled/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pi-OLED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software (FPP)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software (FPP)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/first-boot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First boot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/outputs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring outputs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/current-monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Current monitoring & eFuses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/updating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../print_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print / PDF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#board-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board map
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Board map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differential-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differential ports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixel-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pixel capacity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dmx-lor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DMX / LOR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-and-fm-transmitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio and FM transmitter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpio-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPIO header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buttons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other connectors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fpp-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FPP setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#board-revisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board revisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dimensions-mounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensions &amp; mounting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="k128d-b">K128D-B<a class="headerlink" href="#k128d-b" title="Permanent link">&para;</a></h1>
+<p>One hundred and twenty-eight pixel strings from thirty-two differential ports, for driving
+differential receivers, plus two DMX/LOR outputs, built-in audio and an FM transmitter socket. It
+has no local pixel ports.</p>
+<p><img alt="K128D-B" class="board" loading="lazy" src="../../assets/boards/K128D-B-photo.webp" /></p>
+<p><small>An early K128D-B (v1.0) with a BeagleBone fitted upside down. The current v1.1 has RJ45
+jacks for the DMX outputs; the <a href="#board-map">board map</a> below shows it.</small></p>
+<p>This page describes revision <strong>v1.1</strong> (printed on the board as <code>K128D-B v1.1</code>). See
+<a href="#board-revisions">Board revisions</a> for v1.0.</p>
+<div class="admonition warning">
+<p class="admonition-title">How the K128D-B differs from the other boards</p>
+<ul>
+<li><strong>It needs a BeagleBone Black</strong> (or a compatible BeagleBone), which plugs in <strong>upside down</strong>
+  on top of the cape. See <a href="../../hardware/beaglebone-black/">BeagleBone Black</a>.</li>
+<li><strong>Differential ports only.</strong> Every string goes out over an RJ45 to a
+  <a href="../../hardware/differential/">differential receiver</a>, which powers the pixels. There are no
+  pixel plugs on the board.</li>
+<li><strong>5 V only.</strong> The board takes a regulated 5 V supply for the controller alone.</li>
+<li><strong>About 80,000 pixels in all.</strong> The BeagleBone's processor, not the ports, sets the limit.</li>
+<li>The differential ports are <strong>send-only</strong>: smart receivers work in v1, v2 or V4 mode. Falcon
+  V5 receivers work in V4 mode, without status reports.</li>
+</ul>
+</div>
+<h2 id="specifications">Specifications<a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>K128D-B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local pixel ports</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Differential ports</td>
+<td>32 × RJ45 = <strong>128 strings</strong> (1–128), send-only</td>
+</tr>
+<tr>
+<td>Pixel capacity</td>
+<td>up to 800 per string at 40 fps; about <strong>80,000 in total</strong></td>
+</tr>
+<tr>
+<td>Power input</td>
+<td><strong>5 V DC only</strong>, 2-pin 5.08 mm screw terminal (controller only)</td>
+</tr>
+<tr>
+<td>DMX / serial</td>
+<td>2, RS-485 transmit, on RJ45 jacks with a DMX/LOR switch (<code>ttyS1</code>, <code>ttyS2</code>)</td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>built-in stereo DAC, 3.5 mm line out, FM transmitter socket</td>
+</tr>
+<tr>
+<td>GPIO header</td>
+<td>2×8: 3.3 V, 5 V, GND, I²C and 8 BeagleBone pins</td>
+</tr>
+<tr>
+<td>Ethernet &amp; USB</td>
+<td>the BeagleBone's own</td>
+</tr>
+<tr>
+<td>Display &amp; buttons</td>
+<td>128×64 OLED, Up / Down / Back / Enter / Test, Boot, Power</td>
+</tr>
+<tr>
+<td>Real-time clock</td>
+<td>yes, CR1220 backup cell</td>
+</tr>
+<tr>
+<td>Temperature sensors</td>
+<td>2 (<code>Temp1</code>, <code>Temp2</code>)</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>182.0 × 225.0 mm (7.17 × 8.86 in), 7 mounting holes, 3.2 mm</td>
+</tr>
+<tr>
+<td>FPP output</td>
+<td>BBShiftString</td>
+</tr>
+<tr>
+<td>Requires</td>
+<td>BeagleBone Black or compatible, FPP 9.5 or later</td>
+</tr>
+</tbody>
+</table>
+<h2 id="board-map">Board map<a class="headerlink" href="#board-map" title="Permanent link">&para;</a></h2>
+<p><img alt="K128D-B from above" class="board" loading="lazy" src="../../assets/boards/K128D-B-top.webp" /></p>
+<p>The BeagleBone mounts upside down over the two long headers at the top right, with its Ethernet
+jack over the notch in the right-hand edge.</p>
+<h3 id="power">Power<a class="headerlink" href="#power" title="Permanent link">&para;</a></h3>
+<p>The power terminal is on the right-hand edge, below the BeagleBone, marked <strong>5V</strong> (upper screw) and
+<strong>GND</strong> (lower screw). It powers the BeagleBone and all of the logic, including the thirty-two
+differential driver chips. The receivers power the pixels from their own supplies. Use a regulated
+5 V supply rated <strong>at least 4 A</strong>. The LED beside the terminal lights when the board has power. FPP
+shows no input voltage reading on this board.</p>
+<div class="admonition danger">
+<p class="admonition-title">5 V only</p>
+<p>Use a regulated <strong>5 V</strong> supply, and check that 5 V goes to the upper screw before you switch
+on. Don't connect 12 V or 24 V.</p>
+</div>
+<h3 id="differential-ports">Differential ports<a class="headerlink" href="#differential-ports" title="Permanent link">&para;</a></h3>
+<p>The thirty-two jacks fill the lower part of the board in 8 rows of 4. They are <strong>vertical</strong> jacks:
+the cables plug in from above. Each carries four strings, numbered as printed beside it, <strong>across
+each row</strong> and then down:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Row 1</strong> (top)</td>
+<td><code>1-4</code></td>
+<td><code>5-8</code></td>
+<td><code>9-12</code></td>
+<td><code>13-16</code></td>
+</tr>
+<tr>
+<td><strong>Row 2</strong></td>
+<td><code>17-20</code></td>
+<td><code>21-24</code></td>
+<td><code>25-28</code></td>
+<td><code>29-32</code></td>
+</tr>
+<tr>
+<td><strong>Row 3</strong></td>
+<td><code>33-36</code></td>
+<td><code>37-40</code></td>
+<td><code>41-44</code></td>
+<td><code>45-48</code></td>
+</tr>
+<tr>
+<td><strong>Row 4</strong></td>
+<td><code>49-52</code></td>
+<td><code>53-56</code></td>
+<td><code>57-60</code></td>
+<td><code>61-64</code></td>
+</tr>
+<tr>
+<td><strong>Row 5</strong></td>
+<td><code>65-68</code></td>
+<td><code>69-72</code></td>
+<td><code>73-76</code></td>
+<td><code>77-80</code></td>
+</tr>
+<tr>
+<td><strong>Row 6</strong></td>
+<td><code>81-84</code></td>
+<td><code>85-88</code></td>
+<td><code>89-92</code></td>
+<td><code>93-96</code></td>
+</tr>
+<tr>
+<td><strong>Row 7</strong></td>
+<td><code>97-100</code></td>
+<td><code>101-104</code></td>
+<td><code>105-108</code></td>
+<td><code>109-112</code></td>
+</tr>
+<tr>
+<td><strong>Row 8</strong> (bottom)</td>
+<td><code>113-116</code></td>
+<td><code>117-120</code></td>
+<td><code>121-124</code></td>
+<td><code>125-128</code></td>
+</tr>
+</tbody>
+</table>
+<p>The ports are send-only, with the standard four-strings-per-RJ45 pinout. Any standard differential
+receiver works, and smart receivers work in <strong>v1, v2 or V4</strong> mode; with v2 you can chain up to six
+receivers on a port. Falcon V5 receivers also work, set to V4, but they can't send status back. See
+<a href="../../hardware/differential/">Differential ports</a>.</p>
+<h3 id="pixel-capacity">Pixel capacity<a class="headerlink" href="#pixel-capacity" title="Permanent link">&para;</a></h3>
+<p>Each string can drive up to <strong>800 pixels at 40 fps</strong>, or 1600 at 20 fps. All the strings are sent
+together, so the longest string sets the frame rate for the whole board.</p>
+<p>The whole board tops out at <strong>about 80,000 pixels</strong>, because the BeagleBone's single processor
+prepares every pixel for every frame. Spread them across the ports however you like. Using the
+built-in audio takes some of that processor time, so the limit is a little lower when FPP plays
+audio from the board.</p>
+<h3 id="dmx-lor">DMX / LOR<a class="headerlink" href="#dmx-lor" title="Permanent link">&para;</a></h3>
+<p>The two serial outputs are RJ45 jacks at the top-left corner: <code>ttyS1</code> on the left and <code>ttyS2</code> on
+the right. Each has a small slide switch beside it:</p>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>RJ45 pins</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DMX</strong> (up)</td>
+<td>Data + on pin 1, Data − on pin 2, ground on 7 and 8</td>
+<td>DMX over RJ45, Renard, Pixelnet</td>
+</tr>
+<tr>
+<td><strong>LOR</strong> (down)</td>
+<td>Data + on pin 4, Data − on pin 5, ground on 7 and 8</td>
+<td>Light-O-Rama networks: plug straight into LOR controllers</td>
+</tr>
+</tbody>
+</table>
+<p>The outputs are transmit-only. FPP calls them <code>ttyS1</code> and <code>ttyS2</code>. See
+<a href="../../hardware/dmx/">DMX / serial</a>.</p>
+<h3 id="audio-and-fm-transmitter">Audio and FM transmitter<a class="headerlink" href="#audio-and-fm-transmitter" title="Permanent link">&para;</a></h3>
+<p>The board has a built-in <strong>PCM5102A</strong> stereo DAC. Its <strong>3.5 mm line-out jack</strong> is in the notch on
+the top edge, and the <strong>FM transmitter socket</strong> (<code>RST</code> … <code>L R</code>) is beside it, for an optional
+Si4713 module. See <a href="../../hardware/audio/">Audio</a>.</p>
+<h3 id="gpio-header">GPIO header<a class="headerlink" href="#gpio-header" title="Permanent link">&para;</a></h3>
+<p>The 2×8 header beside the <strong>Test</strong> button brings out power, the I²C bus and eight BeagleBone
+pins, for extra buttons, switches or I²C sensors:</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Signal</th>
+<th>Pin</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3.3 V</td>
+<td>2</td>
+<td>5 V</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SDA</td>
+<td>4</td>
+<td>5 V</td>
+</tr>
+<tr>
+<td>5</td>
+<td>SCL</td>
+<td>6</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>7</td>
+<td>P8-27</td>
+<td>8</td>
+<td>P8-17</td>
+</tr>
+<tr>
+<td>9</td>
+<td>GND</td>
+<td>10</td>
+<td>P8-16</td>
+</tr>
+<tr>
+<td>11</td>
+<td>P8-18</td>
+<td>12</td>
+<td>P8-13</td>
+</tr>
+<tr>
+<td>13</td>
+<td>P8-15</td>
+<td>14</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>15</td>
+<td>P8-14</td>
+<td>16</td>
+<td>P8-19</td>
+</tr>
+</tbody>
+</table>
+<p>Pin 1 is at the bottom left; the signal names are printed above and below the pins. Use the pins in
+FPP's <em>GPIO Inputs</em>, under their BeagleBone names. They connect straight to the BeagleBone, so they
+are <strong>3.3 V only</strong>: wire buttons to switch a pin to GND and use the pull-up mode.</p>
+<h3 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Up</code> <code>Down</code> <code>Back</code> <code>Enter</code></td>
+<td>the menu buttons, at the left below the OLED. <a href="../../hardware/controls/">Controls &amp; display</a></td>
+</tr>
+<tr>
+<td><code>Test</code></td>
+<td>to the right of the menu buttons. <a href="../../hardware/controls/#test-button">Test button</a></td>
+</tr>
+<tr>
+<td><code>Boot</code></td>
+<td>below the BeagleBone. Hold it at power-on to boot an older BeagleBone from its SD card; see <a href="../../hardware/beaglebone-black/#booting-from-the-sd-card">Booting from the SD card</a>. Pressing it while the board is running briefly glitches strings 65–72.</td>
+</tr>
+<tr>
+<td><code>Power</code></td>
+<td>left of the power terminal. Shuts down or restarts the BeagleBone; see <a href="../../hardware/beaglebone-black/#power-button">Power button</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-connectors">Other connectors<a class="headerlink" href="#other-connectors" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Connector</th>
+<th>Marking</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OLED</td>
+<td><code>GND VDD SCK SDA</code></td>
+<td>top left. <a href="../../hardware/controls/">Controls &amp; display</a></td>
+</tr>
+<tr>
+<td>RTC battery</td>
+<td>coin-cell holder <strong>under the OLED</strong></td>
+<td>unplug the OLED to change the cell. <a href="../../hardware/network-usb-rtc/#real-time-clock-rtc">Clock</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="fpp-setup">FPP setup<a class="headerlink" href="#fpp-setup" title="Permanent link">&para;</a></h2>
+<p>When FPP detects the K128D-B it sets itself up automatically. It enables the <strong>K128D-B</strong>
+pixel-string layout (FPP's <strong>BBShiftString</strong> output, with all 128 strings at 100 pixels each), the
+built-in audio, the temperature sensors, the FM transmitter plugin's settings, and two disabled DMX
+outputs on <code>ttyS1</code> and <code>ttyS2</code>. Set the pixel counts and start channels from xLights or the FPP
+<em>Pixel Strings</em> page. See <a href="../../software/outputs/">Configuring outputs</a>.</p>
+<h2 id="board-revisions">Board revisions<a class="headerlink" href="#board-revisions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Revision</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>v1.0</strong></td>
+<td>The two DMX outputs are <strong>3-pin pluggable terminals</strong> (<code>G - +</code>), with no DMX/LOR switch, and the differential jacks are surface-mount parts.</td>
+</tr>
+<tr>
+<td><strong>v1.1</strong></td>
+<td>DMX outputs on RJ45 jacks with DMX/LOR switches, sturdier through-hole differential jacks, and an electronic fuse on the power input.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dimensions-mounting">Dimensions &amp; mounting<a class="headerlink" href="#dimensions-mounting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>182.0 × 225.0 mm</strong> (7.17 × 8.86 in), 7 plated mounting holes, 3.2 mm, for <strong>M3</strong> (or #4)
+  screws and standoffs.</li>
+<li>Use standoffs at least 6 mm (¼ in) tall, so nothing on the underside touches the enclosure.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../k64d-b/" class="md-footer__link md-footer__link--prev" aria-label="Previous: K64D-B">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                K64D-B
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../octoplus/" class="md-footer__link md-footer__link--next" aria-label="Next: OctoPlus">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                OctoPlus
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Kulp Lights
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
