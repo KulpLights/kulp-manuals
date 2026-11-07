@@ -36,14 +36,21 @@ This page describes revision **v4.1.0** (printed on the board as `K16-Max v4.1.0
 
 ### Power terminals
 
-| Terminal | Position | Feeds | FPP reading | Also powers the controller? |
-|---|---|---|---|---|
-| **V1** | left side, upper | P1–P4 | VIN1 | **yes** |
-| **V2** | left side, lower | P5–P8 | VIN2 | no |
-| **V3** | right side, upper | P9–P12 | VIN3 | no |
-| **V4** | right side, lower | P13–P16 | VIN4 | no |
+The four terminals, two on each side, each power one bank of four ports:
 
-The blue LED beside **V1** lights when it has power. **V1 must be powered for the controller to boot.**
+| Terminal | Feeds | FPP reading | Also powers the controller? |
+|---|---|---|---|
+| **Upper left** | P1–P4 | VIN1 | **yes** |
+| **Lower left** | P5–P8 | VIN2 | no |
+| **Upper right** | P9–P12 | VIN3 | no |
+| **Lower right** | P13–P16 | VIN4 | no |
+
+**Each terminal can have its own supply and voltage.** For example, run 12 V pixels on one bank
+and 5 V pixels on another, each from a supply that matches its pixels. Just make sure every port in
+a bank uses pixels of that bank's voltage. All the grounds are connected together on the board.
+
+The blue LED beside the **upper-left** terminal lights when it has power. **The upper-left
+terminal must be powered for the controller to boot.**
 
 See [Power](../hardware/power.md) for supply sizing, wire size and safety.
 

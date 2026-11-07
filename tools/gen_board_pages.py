@@ -50,38 +50,52 @@ boards = [
       dmx='2 (`DMX1`, `DMX2`)', audio=True, usb=3, fan=True, exp=True),
 ]
 
+BANKS = """**Each terminal can have its own supply and voltage.** For example, run 12 V pixels on one bank
+and 5 V pixels on another, each from a supply that matches its pixels. Just make sure every port in
+a bank uses pixels of that bank's voltage. All the grounds are connected together on the board."""
+
 POWER = {
- 'k8': """| Terminal | Feeds | FPP reading | Also powers the controller? |
+ 'k8': """The two terminals along the bottom edge each power one bank of four ports:
+
+| Terminal | Feeds | FPP reading | Also powers the controller? |
 |---|---|---|---|
-| **Left** (bottom edge) | P1–P4 | VIN1 | no |
-| **Right** (bottom edge) | P5–P8 | VIN2 | **yes** |
+| **Left** | P1–P4 | VIN1 | no |
+| **Right** | P5–P8 | VIN2 | **yes** |
+
+""" + BANKS + """
 
 The blue LED beside the **right** terminal lights when it has power. **The right terminal must
 be powered for the controller to boot.**""",
- 'k16': """| Terminal | Position | Feeds | FPP reading | Also powers the controller? |
-|---|---|---|---|---|
-| **V1** | left side, upper | P1–P4 | VIN1 | **yes** |
-| **V2** | left side, lower | P5–P8 | VIN2 | no |
-| **V3** | right side, upper | P9–P12 | VIN3 | no |
-| **V4** | right side, lower | P13–P16 | VIN4 | no |
+ 'k16': """The four terminals, two on each side, each power one bank of four ports:
 
-The blue LED beside **V1** lights when it has power. **V1 must be powered for the controller to boot.**""",
- 'k32': """The four terminals down the **left** edge feed the left half of the board, and the
-four down the **right** edge feed the right half. FPP's VIN numbers don't follow
-reading order:
+| Terminal | Feeds | FPP reading | Also powers the controller? |
+|---|---|---|---|
+| **Upper left** | P1–P4 | VIN1 | **yes** |
+| **Lower left** | P5–P8 | VIN2 | no |
+| **Upper right** | P9–P12 | VIN3 | no |
+| **Lower right** | P13–P16 | VIN4 | no |
 
-| Terminal | Position | Feeds | FPP reading | Also powers the controller? |
-|---|---|---|---|---|
-| **V1** | left, row 1 (top) | P1–P4 | VIN1 | **yes** |
-| **V2** | left, row 2 | P5–P8 | VIN2 | no |
-| **V5** | left, row 3 | P9–P12 | VIN5 | no |
-| **V6** | left, row 4 | P13–P16 | VIN6 | no |
-| **V3** | right, row 1 (top) | P17–P20 | VIN3 | no |
-| **V4** | right, row 2 | P21–P24 | VIN4 | no |
-| **V7** | right, row 3 | P25–P28 | VIN7 | no |
-| **V8** | right, row 4 | P29–P32 | VIN8 | no |
+""" + BANKS + """
 
-The blue LED beside **V1** lights when it has power. **V1 must be powered for the controller to boot.**""",
+The blue LED beside the **upper-left** terminal lights when it has power. **The upper-left
+terminal must be powered for the controller to boot.**""",
+ 'k32': """The eight terminals, four down each side, each power the bank of four ports beside them:
+
+| Terminal | Feeds | FPP reading | Also powers the controller? |
+|---|---|---|---|
+| **Left, 1st** (top) | P1–P4 | VIN1 | **yes** |
+| **Left, 2nd** | P5–P8 | VIN2 | no |
+| **Left, 3rd** | P9–P12 | VIN3 | no |
+| **Left, 4th** (bottom) | P13–P16 | VIN4 | no |
+| **Right, 1st** (top) | P17–P20 | VIN5 | no |
+| **Right, 2nd** | P21–P24 | VIN6 | no |
+| **Right, 3rd** | P25–P28 | VIN7 | no |
+| **Right, 4th** (bottom) | P29–P32 | VIN8 | no |
+
+""" + BANKS + """
+
+The blue LED beside the **top-left** terminal lights when it has power. **The top-left terminal
+must be powered for the controller to boot.**""",
 }
 
 # Mounting drawings and 3D-printable mounts from the kulplights.com product pages.

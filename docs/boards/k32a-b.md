@@ -64,7 +64,9 @@ every terminal **G is the outer screw**, nearer the corner, and **V+ the inner o
 
 - **The board won't start without power on the bottom-right terminal**, even with the others
   powered.
-- Each bank can run its own voltage, so 5 and 12 V pixels can share the board on different banks.
+- **Each terminal can have its own supply and voltage**: run 12 V pixels on one bank and 5 V
+  pixels on another, each from a supply that matches its pixels. All the grounds are connected
+  together on the board.
 - **v1.3 and later:** 5–18 V on any terminal. Don't use 24 V supplies.
 - **Before v1.3:** 5 or 12 V only, 12 V maximum. The 3-pin **Input Voltage Select** jumper, at the
   lower right, must match the supply on the bottom-right terminal: **5V** for 5 V, **12V** for 12 V.

@@ -8,7 +8,7 @@ goes further.
 
 | Check | Why |
 |---|---|
-| Is the **logic power terminal** powered? | Only one terminal runs the controller: V1 on K16/K32, the **right-hand** terminal on K8. The other boards have one terminal. See [Power](hardware/power.md#banks). |
+| Is the **logic power terminal** powered? | Only one terminal runs the controller: the **upper-left** one on the K16 and K32, the **right-hand** one on the K8. The other boards have one terminal. See [Power](hardware/power.md#banks). |
 | Is the blue LED beside that terminal lit? | If not, there's no voltage at the terminal. Check the supply, the wiring and the polarity. |
 | Is the polarity right? | Reversed power is blocked, not damaging, but the board stays off. Swap the wires. |
 | Is the second blue LED (5 V) lit? | If the terminal LED is on but this one is off, contact support. |

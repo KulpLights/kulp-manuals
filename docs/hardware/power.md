@@ -6,8 +6,9 @@ The local pixel ports are grouped in **banks of four**. Each bank gets its power
 one **power input terminal**. Every port in a bank receives that terminal's voltage,
 so a bank must be wired to a supply that matches the pixels on all four of its ports.
 
-- Each bank can run its own voltage, so 5 V, 12 V and 24 V pixels can share one
-  controller as long as they are on **different banks**.
+- **Each bank can have its own supply and its own voltage.** Run 12 V pixels on one bank and
+  5 V pixels on another, or 24 V on a third: 5 V, 12 V and 24 V pixels can share one controller
+  as long as they are on **different banks**, each fed from a supply that matches its pixels.
 - All grounds (G/V−) are connected together on the board.
 - The [differential ports](differential.md) carry **data only**. Strings on differential
   receivers are powered at the receiver.
@@ -21,8 +22,8 @@ which terminal feeds which ports.
 | K8-PB | 1 (5–18 V) | all 8 ports | the only terminal |
 | K4-PB | 1 (5 or 12 V, 18 V max) | all 4 ports | the only terminal |
 | K40D-PB | 1 (5 V only) | — (differential only) | the only terminal |
-| K16, K16-Pro, K16-Max | 4 | 4 ports | **V1**, upper left (ports 1–4) |
-| K32, K32-Pro, K32-Max | 8 | 4 ports | **V1**, top left (ports 1–4) |
+| K16, K16-Pro, K16-Max | 4 | 4 ports | the **upper-left** terminal (ports 1–4) |
+| K32, K32-Pro, K32-Max | 8 | 4 ports | the **top-left** terminal (ports 1–4) |
 | PocketScroller v2, v3 and -16 | 1 (5 V only) | — | the only terminal |
 | K8-B, K8-B-Scroller | 1 (5–18 V) | all 8 ports | the only terminal |
 | K64D-B, K128D-B, OctoPlus | 1 (5 V only) | — | the only terminal |
@@ -82,8 +83,8 @@ polarity before you power up. Pixels have no such protection; see [Safety](../ge
 
 FPP shows each input voltage in its status bar and on the OLED status pages
 (**VIN1**, **VIN2**, …). The terminals aren't numbered on the board, so each board page has a
-map of which **VIN** reading belongs to which terminal. On the K32 boards, for example,
-**VIN3** is the *right-hand* top terminal (ports 17–20).
+map of which **VIN** reading belongs to which terminal. They follow the port numbers: **VIN1** is
+the terminal for ports 1–4 (1–8 on boards with eight ports per terminal), **VIN2** the next bank, and so on.
 
 ## Choosing power supplies
 

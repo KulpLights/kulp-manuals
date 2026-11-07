@@ -36,10 +36,16 @@ This page describes revision **v4.1.0** (printed on the board as `K8-Pro v4.1.0`
 
 ### Power terminals
 
+The two terminals along the bottom edge each power one bank of four ports:
+
 | Terminal | Feeds | FPP reading | Also powers the controller? |
 |---|---|---|---|
-| **Left** (bottom edge) | P1–P4 | VIN1 | no |
-| **Right** (bottom edge) | P5–P8 | VIN2 | **yes** |
+| **Left** | P1–P4 | VIN1 | no |
+| **Right** | P5–P8 | VIN2 | **yes** |
+
+**Each terminal can have its own supply and voltage.** For example, run 12 V pixels on one bank
+and 5 V pixels on another, each from a supply that matches its pixels. Just make sure every port in
+a bank uses pixels of that bank's voltage. All the grounds are connected together on the board.
 
 The blue LED beside the **right** terminal lights when it has power. **The right terminal must
 be powered for the controller to boot.**

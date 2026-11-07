@@ -74,8 +74,8 @@ edge.
 
     - **The board won't start without power on the right-hand `V+ 13-16` terminal**, even with the
       others powered.
-    - Each bank can run its own voltage, **5–24 V**, so 5, 12 and 24 V pixels can share the board on
-      different banks.
+    - **Each terminal can have its own supply and voltage**, 5–24 V: run 12 V pixels on one bank and
+      5 V pixels on another, each from a supply that matches its pixels.
     - FPP shows the four voltages as **VIN1**–**VIN4**. Two blue LEDs on the right-hand edge show
       that the right-hand terminal has power and that the 5 V supply is running.
     - Only the controller's own supply (the right-hand terminal) is protected against a reversed
@@ -91,7 +91,8 @@ edge.
     | right | **V+** | **G** | ports 9–16, **and the BeagleBone and all the logic** |
 
     - **The board won't start without power on the right-hand terminal.**
-    - Each terminal can run its own voltage, **5–18 V**. Don't use 24 V supplies.
+    - **Each terminal can have its own supply and voltage**, 5–18 V: for example 12 V pixels on
+      ports 1–8 and 5 V pixels on ports 9–16. Don't use 24 V supplies.
     - FPP shows the two voltages as **VIN1** and **VIN2**.
     - The controller's own supply is protected against a reversed supply; the pixel ports aren't.
 
@@ -104,7 +105,8 @@ edge.
     | left | **G** | **V+** | ports 1–8 |
     | right | **V+** | **G** | ports 9–16, **and the BeagleBone and all the logic** |
 
-    - **5 V or 12 V only, 12 V maximum.** Don't use 24 V supplies.
+    - **5 V or 12 V only, 12 V maximum.** Don't use 24 V supplies. Each terminal can have its own
+      supply, so 12 V pixels on one side and 5 V pixels on the other works.
     - The 3-pin **Input Voltage Select** jumper must match the
       supply on the right-hand terminal: **5V** for a 5 V supply, **12V** for 12 V.
     - **The board won't start without power on the right-hand terminal.**
